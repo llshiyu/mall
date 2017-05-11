@@ -1,0 +1,19 @@
+.form-group .form-control {
+  width: 335px;
+  display: inline-block;
+  margin-right: 5px;
+}
+.date.col-sm-8 {
+  width: 69.666667%;
+}
+.date.col-sm-8 .form-control {
+  margin-right: -2px;
+  width: inherit;
+}
+.date.col-sm-8 span {
+  display: inline-block;
+  height: 34px;
+  width: 37px;
+  position: relative;
+  left: 0;
+}

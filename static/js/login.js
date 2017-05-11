@@ -8,53 +8,101 @@ var actionUrl = '../index.html';
 //接口地址
 var url = 'http://120.24.68.200:8080';
 
-$(function(){
+$(function() {
+
 	//设置验证码的图片地址
-	$('#kaptchaImage').attr('src',url+'/captcha.jpg');
+	$('#kaptchaImage').attr('src', url + '/captcha.jpg');
 	//点击图片生成验证码
-	$('#kaptchaImage').click(function () {
+	$('#kaptchaImage').click(function() {
 		changeCode();
-    });
-    //form表单提交
-	$('#form-submit').click(function(e){
-		changeCode();
+	});
+	//登录form表单提交
+	$('#login-submit').click(function(e) {
 		var principal = $('#principal').val();
-	    var credentials = $('#credentials').val();
-	    var captcha = $('#captcha').val();
-	    
-	    console.log(principal == '');
-		console.log(principal+' '+credentials+' '+captcha);
+		var credentials = $('#credentials').val();
+		var captcha = $('#captcha').val();
+
+		console.log(principal + ' ' + credentials + ' ' + captcha);
 		$.ajax({
-			type:"post",
-			url:url+'/user/login',
-			data:{
-				principal:principal,
-		    	credentials:credentials,
-		    	captcha:captcha
+			type: "post",
+			url: url + '/user/login',
+			data: {
+				principal: principal,
+				credentials: credentials,
+				captcha: captcha
 			},
-			success:function(data){
-				
-				console.log('2 :'+principal+' '+credentials+' '+captcha);
+			xhrFields: {
+				withCredentials: true //支持附带详细信息
+			},
+			success: function(data) {
+				$('#err-prompt').empty().append(data.message);
+				console.log(data.message);
+				console.log('2 :' + principal + ' ' + credentials + ' ' + captcha);
 				console.log(data);
 				console.log('succ');
+				if(data.code != '000') {
+					changeCode();
+				}
 			},
-			error:function(){
+			error: function() {
 				console.log('登录的接口错误');
 			}
 		});
+
 		e.preventDefault();
-	})
+	});
+	//注册form表单提交
+	$('#register-submit').click(function(e) {
+		var username = $('#username').val();
+		var password = $('#password').val();
+		var confirm = $('#confirm').val();		
+		var email = $('#email').val();
+		var captcha = $('#captcha').val();
+		
+		console.log(username + ' ' + password + ' ' + confirm + ' ' + email + ' ' + captcha);
+		$.ajax({
+			type: "post",
+			url: url + '/user/register',
+			data: {
+				username: username,
+				password: password,
+				confirm: confirm,
+				email: email,
+				captcha: captcha
+			},
+			xhrFields: {
+				withCredentials: true //支持附带详细信息
+			},
+			//			crossDomain:true,//请求偏向外域
+			success: function(data) {
+				$('#err-prompt').empty().append(data.message);
+				console.log(data.message);
+				console.log(data);
+				console.log('succ');
+				if(data.code != '000') {
+					changeCode();
+				}
+			},
+			error: function() {
+				console.log('登录的接口错误');
+			}
+		});
+
+		e.preventDefault();
+	});
+
 });
 
 //关闭窗口时自动退出
-window.onbeforeunload = function () {
-    if (event.clientX > 360 && event.clientY < 0 || event.altKey) {
-        alert(parent.document.location);
-    }
+window.onbeforeunload = function() {
+	if(event.clientX > 360 && event.clientY < 0 || event.altKey) {
+		alert(parent.document.location);
+	}
 };
 
 //生成图片验证码
 function changeCode() {
-    $('#kaptchaImage').hide().attr('src', url+'/captcha.jpg?' + Math.floor(Math.random() * 100)).fadeIn();
-    event.cancelBubble = true;
+	$('#kaptchaImage').hide().attr('src', url + '/captcha.jpg?' + Math.floor(Math.random() * 100)).fadeIn();
+	event.cancelBubble = true;
 }
+

@@ -1,39 +1,46 @@
 
-@form-width:560px;
-@input-height:34px;
-@kaptcha-image-height:55px;
-@kaptcha-image-width:150px;
+@form-width: 560px;
+@input-height: 34px;
+@kaptcha-image-height: 37px;
+@kaptcha-image-width: 100px;
+@formTipsOk-height: 16px;
 
-.container{
-    padding: 0;
-    margin: 0 auto;
-}
-#form{
+#form {
     width: @form-width;
-    margin: 0 auto 0;
+    margin: 100px auto 0;
 }
-.form-group{
+.form-group {
     width: 100%;
-    label{
+    label {
         width: @form-width / 11.2;
         font-size: 16px;
         margin-right: 10px;
+        line-height: @input-height;
     }
-    input{
-        width: @form-width - (@form-width / 11.2)*2;
+    input {
+        width: @form-width - (@form-width / 11.2)*4.5;
         display: inline-block;
+        margin-right: 5px;
     }
-    .kaptcha-input{
-        width: 200px;
-        margin-right: 10px;
-        margin-top: (@kaptcha-image-height - @input-height)/2 ;
+    .kaptcha-input {
+        width: @form-width - (@form-width / 11.2)*8.5;
+        margin-right: 15px;
+        margin-top: (@kaptcha-image-height - @input-height)/2;
     }
-    .kaptcha-image{
-        width: @kaptcha-image-width;
-        height: @kaptcha-image-height;
-        margin-right: 10px;
+}
+.err-prompt {
+    color: #C9302C;
+}
+
+//注册页不同样式
+.register {
+    label {
+        width: @form-width / 8;
     }
-    .err-prompt{
-        color: red;
+    .captcha-prompt {
+        right: 34px;
+    }
+    .prompt{
+        padding-left: 9px;
     }
 }
