@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>注册</title>
+	<link rel="stylesheet" type="text/css" href="../../static/css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="../../static/css/config/config.css"/>
+	<link rel="stylesheet" type="text/css" href="../../static/css/register.css"/>
+</head>
+<body>
+	<div class="container">
+		<form id="form">
+			<div class="form-group">
+				<label for="form-user">用户名</label>
+				<input type="text" class="form-control" id="principal" placeholder="请输入用户名">
+			</div>
+			<div class="form-group">
+				<label for="form-credentials">密&nbsp;&nbsp;&nbsp;码</label>
+				<input type="password" class="form-control" id="credentials" placeholder="请输入密码">
+			</div>
+			<div class="form-group">
+				<label for="form-credentials">确认密码</label>
+				<input type="password" class="form-control" id="credentials" placeholder="请输入确认密码">
+			</div>
+			<div class="form-group">
+				<label for="form-credentials">邮&nbsp;&nbsp;&nbsp;箱</label>
+				<input type="password" class="form-control" id="credentials" placeholder="请输入密码">
+			</div>
+			<div class="form-group clear">
+				<label for="form-captcha">验证码</label>
+				<input type="text" class="form-control kaptcha-input" id="captcha" maxlength="10" placeholder="请输入验证码" />
+				<img src="" id="kaptchaImage" style="margin-bottom: -3px" class="kaptcha-image" />
+				<a href="#" onclick="changeCode()">看不清?换一张</a>
+			</div>
+			<input type="submit" class="btn btn-default center-block" id="form-submit" value="登录" />
+		</form>
+	</div>
+<script src="../../static/js/lib/jquery2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/lib/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/register.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

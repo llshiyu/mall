@@ -1,0 +1,39 @@
+
+@form-width:560px;
+@input-height:34px;
+@kaptcha-image-height:55px;
+@kaptcha-image-width:150px;
+
+.container{
+    padding: 0;
+    margin: 0 auto;
+}
+#form{
+    width: @form-width;
+    margin: 0 auto 0;
+}
+.form-group{
+    width: 100%;
+    label{
+        width: @form-width / 11.2;
+        font-size: 16px;
+        margin-right: 10px;
+    }
+    input{
+        width: @form-width - (@form-width / 11.2)*2;
+        display: inline-block;
+    }
+    .kaptcha-input{
+        width: 200px;
+        margin-right: 10px;
+        margin-top: (@kaptcha-image-height - @input-height)/2 ;
+    }
+    .kaptcha-image{
+        width: @kaptcha-image-width;
+        height: @kaptcha-image-height;
+        margin-right: 10px;
+    }
+    .err-prompt{
+        color: red;
+    }
+}
