@@ -38,17 +38,17 @@ $(function() {
 	$.ajax({
 		type: "get",
 		url: url + '/user',
-//		xhrFields: {
-//			withCredentials: true //支持附带详细信息
-//		},
+		xhrFields: {
+			withCredentials: true //支持附带详细信息
+		},
 		success: function(data) {
 			if(data.code == succCode){
-				$('#username').val('data.data.username');
-				$('#nickname').val('data.data.nickname');
-				$('#birthday').val('data.data.birthday');
-				$('#phone').val('data.data.phone');
-				$('#email').val('data.data.email');
-				$('#introduction').val('data.data.introduction');
+				$('#username').val(data.data.username);
+				$('#nickname').val(data.data.nickname);
+				$('#birthday').val(data.data.birthday);
+				$('#phone').val(data.data.phone);
+				$('#email').val(data.data.email);
+				$('#introduction').val(data.data.introduction);
 				if(data.data.username == 'MALE'){
 					$('#male').attr("checked",true);
 				}
@@ -60,53 +60,60 @@ $(function() {
 				}
 			}
 			else{
-				$('#err-prompt').empty().append('获取信息失败   '+data);
+				$('#err-prompt').empty().append('获取信息失败 ');
 				$('body').empty().append(data);
 			}
 		},
 		error: function() {
 			console.log('接口错误');
-			$('#err-prompt').empty().append('接口错误');
+			$('#err-prompt').empty().append('接口错误---加载页面');
 		}
 	});
 
-	//修改form表单提交
-//	$('#user-detail-submit').click(function(e) {
-//		var principal = $('#principal').val();
-//		var credentials = $('#credentials').val();
-//		var captcha = $('#captcha').val();
-//		console.log(principal + ' ' + credentials + ' ' + captcha);
-//		$.ajax({
-//			type: "get",
-//			url: url + '/user',
-//			data: {
-//				principal: principal,
-//				credentials: credentials,
-//				captcha: captcha
-//			},
-//			xhrFields: {
-//				withCredentials: true //支持附带详细信息
-//			},
-//			success: function(data) {
-//				$('#err-prompt').empty().append(data.message);
-//				console.log(data.message);
-//				console.log('2 :' + principal + ' ' + credentials + ' ' + captcha);
-//				console.log(data);
-//				console.log('succ');
-//				if(data.code != succCode) {
-//					changeCode();
-//					console.log("data.code");
-//				}
-//			},
-//			error: function() {
-//				console.log('登录的接口错误');
-//			}
-//		});
-//		$('#credentials').val('');
-//		$('#captcha').val('');
-//
-//		e.preventDefault();
-//	});
+	//点击修改按钮
+	$('#user-detail-submit').click(function(e) {
+		var username = $('#username').val();
+		var nickname = $('#nickname').val();
+		var birthday = $('#birthday').val();
+		var phone = $('#phone').val();
+		var email = $('#email').val();
+		var introduction = $('#introduction').val();
+//		$('input:radio[name="gender"]:checked').val()
+		var gender = $('input:radio[name="gender"]:checked').val();  //选择被选中Radio的Value值
+		var genderNum = '';
+		if(gender == 'UNKNOW')genderNum = 0;
+		if(gender == 'MALE')genderNum = 1;
+		if(gender == 'FEMALE')genderNum = 2;
+		$('#err-prompt').empty().append(gender+' '+genderNum);
+		
+		$.ajax({
+			type: "post",
+			url: url + '/user',
+			data: {
+				_message: put,
+				principal: principal,
+				credentials: credentials,
+				captcha: captcha
+			},
+			xhrFields: {
+				withCredentials: true //支持附带详细信息
+			},
+			success: function(data) {
+				if(data.code == succCode){
+					$('#err-prompt').empty().append('提交信息成功!!!!');
+				}
+				else{
+					$('#err-prompt').empty().append('提交信息失败??????????');
+				}
+			},
+			error: function() {
+				console.log('接口错误');
+				$('#err-prompt').empty().append('接口错误----按钮');
+			}
+		});
+
+		e.preventDefault();
+	});
 
 });
 

@@ -1,0 +1,45 @@
+.container-fluid {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.nav-a {
+  padding-left: 0;
+}
+.nav-a a {
+  font-size: 15px;
+  color: #4fb375;
+}
+.nav-a a:hover {
+  text-decoration: none;
+  color: #429762;
+}
+.content-logo {
+  margin-top: 10px;
+  border-bottom: 1px solid #eee;
+  height: 110px;
+}
+.content-logo .logo {
+  padding-left: 85px;
+}
+.content-logo .logo a {
+  display: inline-block;
+  background: url(../img/bird.png) no-repeat center center;
+  background-size: 100%;
+  width: 100px;
+  height: 100px;
+}
+.content-logo .col-md-4 {
+  line-height: 100px;
+}
+.content-logo .btn-search {
+  background-color: #4fb375;
+}
+.content-logo .cart .glyphicon {
+  color: #5E5E5E;
+}
+.content-logo .cart .icon-cart {
+  font-size: 20px;
+}
+.content-logo .cart span {
+  font-size: 20px;
+}

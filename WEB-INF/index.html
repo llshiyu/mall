@@ -4,13 +4,12 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>主页</title>
-		<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="../static/bootstrap/css/bootstrap.css" />
 		<link rel="stylesheet" type="text/css" href="../static/css/config.css" />
 		<link rel="stylesheet" type="text/css" href="../static/css/index.css" />
 	</head>
 
 	<body>
-
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -21,17 +20,15 @@
 		        <span class="icon-bar"></span>
 		      </button>
 					<a class="navbar-brand" href="javascript:;">欢迎来到飞鸟商城</a>
-					<div class="navbar-brand">
-						<a href="#">请登录 </a>
-						<a href="#">注册</a>
+					<div class="navbar-brand nav-a">
+						<a href="view/login.html">请登录 </a>
+						<a href="view/register.html">免费注册</a>
 					</div>
-
 				</div>
-
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
 						<li>
-							<a href="#">我的账户</a>
+							<a href="#">个人信息</a>
 						</li>
 						<li>
 							<a href="#">我的订单</a>
@@ -41,9 +38,29 @@
 				<!-- /.navbar-collapse -->
 			</div>
 		</nav>
-
+		<div class="container-fluid">
+			<div class="content-logo row">
+				<div class="logo col-md-4">
+					<a href="javascript:;"></a>
+					<img src="../static/img/logo-tit2.png" style="width: 200px;vertical-align: super;"/>
+				</div>
+				<form class="form-horizontal col-md-4">
+					<div class="input-group">  
+				       <input type="text" class="form-control" placeholder="请输入字段名" / >  
+			            <span class="input-group-btn">  
+			               <button class="btn btn-info btn-search">查找</button>  
+			            </span>  
+					 </div>
+				</form>
+				<div class="cart col-md-4 text-center">
+					<i class="glyphicon glyphicon-shopping-cart icon-cart"></i>
+					<span>我的购物车</span>
+					<i class="glyphicon glyphicon-chevron-right icon-next"></i>
+				</div>
+			</div>
+		</div>
 		<script src="../static/js/lib/jquery2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../static/js/lib/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../static/bootstrap/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../static/js/index.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 

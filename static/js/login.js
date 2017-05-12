@@ -47,6 +47,7 @@ $(function() {
 			},
 			error: function() {
 				console.log('接口错误');
+				$('#err-prompt').empty().append('接口错误');
 			}
 		});
 		$('#credentials').val('');
@@ -88,6 +89,7 @@ $(function() {
 			},
 			error: function() {
 				console.log('接口错误');
+				$('#err-prompt').empty().append('接口错误');
 			}
 		});
 
