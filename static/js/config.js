@@ -57,28 +57,35 @@ function inputChange() {
 	}).focus(function() {
 		$(this).triggerHandler("blur");
 	}); //end blur
+	//登录，注册，个人中心修改页点击提交按钮是验证表单
+	var $parents = $('form :input').parent(), //获取input父元素
+		$msgObjs = $('form :input').next("div").children(), // 获取信息提示部分隐藏的div
+		$formBoxObjs = $parents.find(".formTipsBox"); // 获取信息提示框
 	$('#login-submit').click(function(e){
-		var $parent = $('form :input').parent(), //获取input父元素
-			$msgObj = $('form :input').next("div").children(), // 获取信息提示部分隐藏的div
-			$formBoxObj = $parent.find(".formTipsBox"); // 获取信息提示框
-		$formBoxObj.children().remove();
-		$parent.children("em").remove();
+		$formBoxObjs.children().remove();
+		$parents.children("em").remove();
 		publicTips('#principal','请输入用户名');
 		publicTips('#credentials','请输入密码');
 		publicTips('#captcha','请输入验证码');
 		e.preventDefault();
 	});
 	$('#register-submit').click(function(e){
-		var $parent = $('form :input').parent(), //获取input父元素
-			$msgObj = $('form :input').next("div").children(), // 获取信息提示部分隐藏的div
-			$formBoxObj = $parent.find(".formTipsBox"); // 获取信息提示框
-		$formBoxObj.children().remove();
-		$parent.children("em").remove();
+		$formBoxObjs.children().remove();
+		$parents.children("em").remove();
 		publicTips('#username','请输入用户名');
 		publicTips('#password','请输入密码');
 		publicTips('#confirm','请输入密码');
 		publicTips('#email','请输入邮箱');
 		publicTips('#captcha','请输入验证码');
+		e.preventDefault();
+	});
+	$('#user-detail-submit').click(function(e){
+		$formBoxObjs.children().remove();
+		$parents.children("em").remove();
+		publicTips('#nickname','请输入昵称');
+		publicTips('#phone','请输入手机号码');
+		publicTips('#email','请输入邮箱');
+		publicTips('#introduction','请输入简介');
 		e.preventDefault();
 	});
 	//提示信息

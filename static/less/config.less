@@ -114,8 +114,8 @@ legend {
 
 @form-width: 560px;
 @input-height: 34px;
-@kaptcha-image-height: 37px;
-@kaptcha-image-width: 100px;
+@kaptcha-image-height: 35px;
+@kaptcha-image-width: 98px;
 @formTipsOk-height: 16px;
 
 .container {
@@ -145,7 +145,7 @@ input.eInputError:hover {
 .kaptcha-image {
     width: @kaptcha-image-width;
     height: @kaptcha-image-height;
-    margin-right: 5px;
+//  margin-right: 5px;
 }
 .formTipsOk {
     position: relative;
@@ -159,14 +159,14 @@ input.eInputError:hover {
     text-indent: -999em;
 }
 .captcha-a {
-    padding-right: 8px;
+    padding-right: 6px;
     font-size: 12px;
     display: inline-block;
     line-height: @kaptcha-image-height;
 }
 .captcha-prompt {
     position: relative;
-    right: 10px;
+    right: 75px;
 }
 .prompt {
     p {
@@ -188,4 +188,11 @@ input.eInputError:hover {
     .formTipsWarn .formTipsIcon {
         background-position: 0 -20px;
     }
+}
+.err-prompt {
+    color: #C9302C;
+}
+.form-horizontal .form-group {
+    margin-left: 0;
+    margin-right: 0;
 }

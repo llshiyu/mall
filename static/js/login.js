@@ -18,14 +18,10 @@ $(function() {
 		changeCode();
 	});
 	//登录form表单提交
-	$('#login-submit').click(function(e) {
-		
+	$('#login-submit').click(function(e) {		
 		var principal = $('#principal').val();
 		var credentials = $('#credentials').val();
 		var captcha = $('#captcha').val();
-		
-		
-
 		console.log(principal + ' ' + credentials + ' ' + captcha);
 		$.ajax({
 			type: "post",
@@ -50,7 +46,7 @@ $(function() {
 				}
 			},
 			error: function() {
-				console.log('登录的接口错误');
+				console.log('接口错误');
 			}
 		});
 		$('#credentials').val('');
@@ -91,7 +87,7 @@ $(function() {
 				}
 			},
 			error: function() {
-				console.log('登录的接口错误');
+				console.log('接口错误');
 			}
 		});
 

@@ -1,13 +1,9 @@
 .tit {
-  margin-left: 112.5px;
+  margin-left: 112.5px !important;
   margin-bottom: 30px;
 }
 .tit h1 {
   font-family: "楷体";
-}
-.form-submit {
-  margin-top: 20px;
-  margin-left: 150px;
 }
 .login {
   padding: 183.33333333px 450px;
@@ -16,9 +12,6 @@
 }
 .login label {
   font-family: "楷体";
-}
-#form {
-  width: 450px;
 }
 .logo {
   width: 100px;
@@ -31,37 +24,18 @@
   width: 100px;
   height: 100px;
 }
-.form-group {
-  width: 100%;
-}
-.form-group label {
-  width: 49.45054945px;
-  font-size: 16px;
-  margin-right: 10px;
-  line-height: 34px;
-}
 .form-group input {
-  width: 269.19642857px;
+  width: 249.10714286px;
   display: inline-block;
   margin-right: 5px;
 }
 .form-group .kaptcha-input {
-  width: 76.33928571px;
-  margin-right: 10px;
+  width: 68.30357143px;
+  margin-right: 5px;
   margin-top: 1.5px;
-}
-.err-prompt {
-  color: #C9302C;
 }
 .register {
   padding: 120px 400px;
   background: url("../img/bird.png") no-repeat center left;
   background-size: 20%;
-}
-.register label {
-  width: 75px;
-  text-align: center;
-}
-.register .captcha-prompt {
-  right: 7px;
 }

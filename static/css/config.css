@@ -118,12 +118,11 @@ input.eInputError:hover {
 .kaptcha-input {
   width: 135px;
   margin-right: 15px;
-  margin-top: 1.5px;
+  margin-top: 0.5px;
 }
 .kaptcha-image {
-  width: 100px;
-  height: 37px;
-  margin-right: 5px;
+  width: 98px;
+  height: 35px;
 }
 .formTipsOk {
   position: relative;
@@ -137,14 +136,14 @@ input.eInputError:hover {
   text-indent: -999em;
 }
 .captcha-a {
-  padding-right: 8px;
+  padding-right: 6px;
   font-size: 12px;
   display: inline-block;
-  line-height: 37px;
+  line-height: 35px;
 }
 .captcha-prompt {
   position: relative;
-  right: 10px;
+  right: 75px;
 }
 .prompt p {
   display: inline-block;
@@ -164,4 +163,11 @@ input.eInputError:hover {
 }
 .prompt .formTipsWarn .formTipsIcon {
   background-position: 0 -20px;
+}
+.err-prompt {
+  color: #C9302C;
+}
+.form-horizontal .form-group {
+  margin-left: 0;
+  margin-right: 0;
 }

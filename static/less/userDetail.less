@@ -1,16 +1,27 @@
 @form-width: 560px;
 @input-height: 34px;
-
+.tit {
+    margin-left: @form-width / 4 !important;
+    margin-bottom: 30px;
+    h1 {
+        font-family: "楷体";
+    }
+}
+.container{
+    padding: 120px 400px;
+    background: url("../img/bird.png") no-repeat center left;
+    background-size: 20%;
+}
 .form-group {
     .form-control {
-        width: @form-width - (@form-width / 11.2)*4.5;
+        width: @form-width - (@form-width / 11.2)*5;
         display: inline-block;
         margin-right: 5px;
     }
 }
 
 .date.col-sm-8{
-    width: 69.666667%;
+    width: 67.666667%;
     .form-control{
         margin-right: -2px;
         width: inherit;
