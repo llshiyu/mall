@@ -1,3 +1,8 @@
+/*
+ * 个人中心修改页
+ * 2017-05-11
+ * */
+
 $(function(){
 	//日期对象
 	$('.form_datetime').datetimepicker({

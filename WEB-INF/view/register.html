@@ -3,6 +3,7 @@
 
 	<head>
 		<meta charset="UTF-8">
+		<link href="../../static/img/icon.ico" rel="shortcut icon"/>
 		<title>注册</title>
 		<link rel="stylesheet" type="text/css" href="../../static/bootstrap/css/bootstrap.css" />
 		<link rel="stylesheet" type="text/css" href="../../static/css/config.css" />
@@ -11,10 +12,14 @@
 
 	<body>
 		<div class="container register">
-			<form id="form">
+			<!--<div class="img fl"></div>-->
+			<form id="form" class="">
+				<div class="form-group tit">
+					<h1>用户注册</h1>
+				</div>
 				<div class="form-group clear">
 					<label for="form-user" class="fl">用户名</label>
-					<input type="text" class="form-control fl" id="username" placeholder="请输入用户名">
+					<input type="text" class="form-control fl" id="username" placeholder="用户名">
 					<div class="fl prompt">
 						<div class="">
 							<div class="formTipsBox"></div>
@@ -23,7 +28,7 @@
 				</div>
 				<div class="form-group clear">
 					<label for="form-credentials" class="fl">密&nbsp;&nbsp;&nbsp;码</label>
-					<input type="password" class="form-control fl" id="password" placeholder="请输入密码">
+					<input type="password" class="form-control fl" id="password" placeholder="密码">
 					<div class="fl prompt">
 						<div class="">
 							<div class="formTipsBox"></div>
@@ -32,7 +37,7 @@
 				</div>
 				<div class="form-group clear">
 					<label for="form-credentials" class="fl">确认密码</label>
-					<input type="password" class="form-control fl" id="confirm" placeholder="请输入确认密码">
+					<input type="password" class="form-control fl" id="confirm" placeholder="确认密码">
 					<div class="fl prompt">
 						<div class="">
 							<div class="formTipsBox"></div>
@@ -41,7 +46,7 @@
 				</div>
 				<div class="form-group clear">
 					<label for="form-credentials" class="fl">邮&nbsp;&nbsp;&nbsp;箱</label>
-					<input type="password" class="form-control fl" id="email" placeholder="请输入邮箱">
+					<input type="text" class="form-control fl" id="email" placeholder="邮箱">
 					<div class="fl prompt">
 						<div class="">
 							<div class="formTipsBox"></div>
@@ -50,7 +55,7 @@
 				</div>
 				<div class="form-group clear">
 					<label for="form-captcha" class="fl">验证码</label>
-					<input type="text" class="form-control kaptcha-input fl" id="captcha" maxlength="10" placeholder="请输入验证码" />
+					<input type="text" class="form-control kaptcha-input fl" id="captcha" maxlength="10" placeholder="验证码" />
 					<div class="fr prompt captcha-prompt">
 						<div class="">
 							<div class="formTipsBox"></div>
@@ -59,7 +64,8 @@
 					<img src="" id="kaptchaImage" style="margin-bottom: -3px" class="kaptcha-image fl" />
 					<a href="#" onclick="changeCode()" class="fl captcha-a">看不清?换一张</a>
 				</div>
-				<input type="submit" class="btn btn-default" id="register-submit" value="注册" />
+				<p class="err-prompt" id="err-prompt"></p>
+				<input type="submit" class="btn btn-default form-submit" id="register-submit" value="注册" />
 			</form>
 		</div>
 		<script src="../../static/js/lib/jquery2.1.4.min.js" type="text/javascript" charset="utf-8"></script>

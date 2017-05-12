@@ -7,6 +7,7 @@
 var actionUrl = '../index.html';
 //接口地址
 var url = 'http://120.24.68.200:8080';
+var succCode = 200;
 
 $(function() {
 
@@ -18,9 +19,12 @@ $(function() {
 	});
 	//登录form表单提交
 	$('#login-submit').click(function(e) {
+		
 		var principal = $('#principal').val();
 		var credentials = $('#credentials').val();
 		var captcha = $('#captcha').val();
+		
+		
 
 		console.log(principal + ' ' + credentials + ' ' + captcha);
 		$.ajax({
@@ -40,15 +44,18 @@ $(function() {
 				console.log('2 :' + principal + ' ' + credentials + ' ' + captcha);
 				console.log(data);
 				console.log('succ');
-				if(data.code != '000') {
+				if(data.code != succCode) {
 					changeCode();
+					console.log("data.code");
 				}
 			},
 			error: function() {
 				console.log('登录的接口错误');
 			}
 		});
-
+		$('#credentials').val('');
+		$('#captcha').val('');
+		
 		e.preventDefault();
 	});
 	//注册form表单提交
@@ -79,7 +86,7 @@ $(function() {
 				console.log(data.message);
 				console.log(data);
 				console.log('succ');
-				if(data.code != '000') {
+				if(data.code != succCode) {
 					changeCode();
 				}
 			},

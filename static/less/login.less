@@ -1,18 +1,61 @@
 
-@form-width: 560px;
+@form-width: 450px;
 @input-height: 34px;
 @kaptcha-image-height: 37px;
 @kaptcha-image-width: 100px;
 @formTipsOk-height: 16px;
-
+.tit {
+    margin-left: @form-width / 4;
+    margin-bottom: 30px;
+    h1 {
+        //          color: #4fa22f;
+        font-family: "楷体";
+    }
+}
+.form-submit {
+    margin-top: 20px;
+    margin-left: @form-width / 3;
+}
+//登录页背景
+.login {
+//  margin-top: 20px;
+    padding: 550px/3 450px;
+    background: url("../img/login-bg.png") no-repeat center left;
+    background-size: 40%;
+//  .img {
+//      background: url("../img/login-bg.png") no-repeat center left;
+//      background-size: 100%;
+//      height: 560px;
+//      width: 550px;
+//      display: inline-block;
+//      //  margin-left: 20px;
+//  }
+    label {
+//      color: #4fa22f;
+        font-family: "楷体";
+    }
+}
 #form {
     width: @form-width;
-    margin: 100px auto 0;
+//  margin: 550px/3 500px;
+//  padding-left: 200px;
+}
+.logo {
+    width: 100px;
+    height: 100px;
+    a {
+        background: url("../img/bird.png") no-repeat center center;
+        background-size: 100%;
+        display: block;
+        width: 100px;
+        height: 100px;
+        //      margin: 0 auto;
+    }
 }
 .form-group {
     width: 100%;
     label {
-        width: @form-width / 11.2;
+        width: @form-width / 9.1;
         font-size: 16px;
         margin-right: 10px;
         line-height: @input-height;
@@ -23,8 +66,8 @@
         margin-right: 5px;
     }
     .kaptcha-input {
-        width: @form-width - (@form-width / 11.2)*8.5;
-        margin-right: 15px;
+        width: @form-width - (@form-width / 11.2)*9.3;
+        margin-right: 10px;
         margin-top: (@kaptcha-image-height - @input-height)/2;
     }
 }
@@ -34,13 +77,24 @@
 
 //注册页不同样式
 .register {
+    padding: 120px 400px;
+    background: url("../img/bird.png") no-repeat center left;
+    background-size: 20%;
+//  .img {
+//      background: url("../img/bird.png") no-repeat center left;
+//      background-size: 80%;
+//      height: 360px;
+//      width: 300px;
+//      display: inline-block;
+//  }
     label {
-        width: @form-width / 8;
+        width: @form-width / 6;
+        text-align: center;
     }
     .captcha-prompt {
-        right: 34px;
+        right: 7px;
     }
-    .prompt{
-        padding-left: 9px;
+    .prompt {
+        //      padding-left: 9px;
     }
 }

@@ -59,8 +59,8 @@ textarea {
   overflow: auto;
 }
 body {
-  font-size: 12px;
-  font-family: "微软雅黑";
+  font-size: 14px;
+  font-family: "楷体";
 }
 body {
   height: 100%;
@@ -101,11 +101,9 @@ legend {
 }
 .container {
   padding: 0;
-  margin: 0 auto;
 }
 #form {
   width: 560px;
-  margin: 100px auto 0;
 }
 input.eInputFocus,
 input:focus {
@@ -130,7 +128,7 @@ input.eInputError:hover {
 .formTipsOk {
   position: relative;
   top: 9px;
-  left: 10px;
+  left: 5px;
   width: 16px;
   height: 16px;
   background: url("../../static/img/icon-operate.png") no-repeat 0 -40px;
@@ -140,10 +138,13 @@ input.eInputError:hover {
 }
 .captcha-a {
   padding-right: 8px;
+  font-size: 12px;
+  display: inline-block;
+  line-height: 37px;
 }
 .captcha-prompt {
   position: relative;
-  right: 65px;
+  right: 10px;
 }
 .prompt p {
   display: inline-block;

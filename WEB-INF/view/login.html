@@ -3,6 +3,7 @@
 
 	<head>
 		<meta charset="UTF-8">
+		<link href="../../static/img/icon.ico" rel="shortcut icon"/>
 		<title>登录</title>
 		<link rel="stylesheet" type="text/css" href="../../static/bootstrap/css/bootstrap.css" />
 		<link rel="stylesheet" type="text/css" href="../../static/css/config.css" />
@@ -10,12 +11,18 @@
 	</head>
 
 	<body>
-		<div class="container">
-			<form id="form">
-				
+		<div class="container  login">
+			<!--<div class="img fl"></div>-->
+			<form id="form" class="">
+				<div class="form-group logo undis">
+					<a href="javascript:;"></a>
+				</div>
+				<div class="form-group tit">
+					<h1>用户登录</h1>
+				</div>
 				<div class="form-group clear">
 					<label for="form-user" class="fl">用户名</label>
-					<input type="text" class="form-control fl" id="principal" placeholder="请输入用户名">
+					<input type="text" class="form-control fl" id="principal" placeholder="用户名">
 					<div class="fl prompt">
 						<div class="">
 							<div class="formTipsBox"></div>
@@ -23,8 +30,8 @@
 					</div>
 				</div>
 				<div class="form-group clear">
-					<label for="form-credentials" class="fl">密&nbsp;&nbsp;&nbsp;码</label>
-					<input type="password" class="form-control fl" id="credentials" placeholder="请输入密码">
+					<label for="form-credentials" class="fl">密&nbsp;&nbsp;码</label>
+					<input type="password" class="form-control fl" id="credentials" placeholder="密码">
 					<div class="fl prompt">
 						<div class="">
 							<div class="formTipsBox"></div>
@@ -33,7 +40,7 @@
 				</div>
 				<div class="form-group clear">
 					<label for="form-captcha" class="fl">验证码</label>
-					<input type="text" class="form-control kaptcha-input fl" id="captcha" maxlength="10" placeholder="请输入验证码" />
+					<input type="text" class="form-control kaptcha-input fl" id="captcha" maxlength="10" placeholder="验证码" />
 					<div class="fr prompt captcha-prompt">
 						<div class="">
 							<div class="formTipsBox"></div>
@@ -43,8 +50,10 @@
 					<a href="#" onclick="changeCode()" class="fl captcha-a">看不清?换一张</a>
 				</div>
 				<p class="err-prompt" id="err-prompt"></p>
-				<input type="submit" class="btn btn-default" id="login-submit" value="登录" />
+				<input type="submit" class="btn btn-default form-submit" id="login-submit" value="登录" />
 			</form>
+			
+			
 		</div>
 		<script src="../../static/js/lib/jquery2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../static/bootstrap/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>

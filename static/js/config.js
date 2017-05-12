@@ -1,4 +1,7 @@
-
+/*
+ * 公共js，监听输入框状态
+ * 2017-05-11
+ * */
 $(function(){
 	inputChange();
 });
@@ -14,14 +17,9 @@ function inputChange() {
 	$('form :input').blur(function() {
 		var $parent = $(this).parent(), //获取input父元素
 			$msgObj = $(this).next("div").children(), // 获取信息提示部分隐藏的div
-			$formBoxObj = $parent.find(".formTipsBox"), // 获取信息提示框
-			warnTips = {
-				divCls: "formTipsWarn",
-				txtCls: "eInputFocus",
-				tipsObj: $msgObj,
-				txtObj: $(this)
-			}; // 提醒信息对象
-
+			$formBoxObj = $parent.find(".formTipsBox"); // 获取信息提示框
+		
+			
 		// 移除提示信息
 		$formBoxObj.children().remove();
 		$parent.children("em").remove();
@@ -59,37 +57,38 @@ function inputChange() {
 	}).focus(function() {
 		$(this).triggerHandler("blur");
 	}); //end blur
-	// 移除提示样式
-	function revTipsCls(obj) {
-		// 移除信息提示样式
-		if(obj.tipsObj.hasClass(obj.divCls)) {
-			obj.tipsObj.removeClass(obj.divCls);
-		}
-		// 移除文本框提示样式
-		switch(obj.divCls) {
-			case "formTipsWarn":
-				obj.txtObj.removeClass(obj.txtCls);
-				break;
-			case "formTipsErr":
-				if(obj.txtObj.hasClass(obj.txtCls)) {
-
-					obj.txtObj.removeClass(obj.txtCls);
-				}
-		}
-	}
+	$('#login-submit').click(function(e){
+		var $parent = $('form :input').parent(), //获取input父元素
+			$msgObj = $('form :input').next("div").children(), // 获取信息提示部分隐藏的div
+			$formBoxObj = $parent.find(".formTipsBox"); // 获取信息提示框
+		$formBoxObj.children().remove();
+		$parent.children("em").remove();
+		publicTips('#principal','请输入用户名');
+		publicTips('#credentials','请输入密码');
+		publicTips('#captcha','请输入验证码');
+		e.preventDefault();
+	});
+	$('#register-submit').click(function(e){
+		var $parent = $('form :input').parent(), //获取input父元素
+			$msgObj = $('form :input').next("div").children(), // 获取信息提示部分隐藏的div
+			$formBoxObj = $parent.find(".formTipsBox"); // 获取信息提示框
+		$formBoxObj.children().remove();
+		$parent.children("em").remove();
+		publicTips('#username','请输入用户名');
+		publicTips('#password','请输入密码');
+		publicTips('#confirm','请输入密码');
+		publicTips('#email','请输入邮箱');
+		publicTips('#captcha','请输入验证码');
+		e.preventDefault();
+	});
 	//提示信息
 	function publicTips(obj, msg) {
 		var $parent = $(obj).parent(), //获取input父元素
 			$msgObj = $(obj).next("div").children(), // 获取信息提示部分隐藏的div
-			$formBoxObj = $parent.find(".formTipsBox"), // 获取信息提示框
-			warnTips = {
-				divCls: "formTipsWarn",
-				txtCls: "eInputFocus",
-				tipsObj: $msgObj,
-				txtObj: $(this)
-			}; // 提醒信息对象
+			$formBoxObj = $parent.find(".formTipsBox"); // 获取信息提示框
+			console.log($(obj).val());
 		// 输入是否为空
-		if(obj.value == "") {
+		if(obj.value == "" || $(obj).val() == "") {
 			// 提醒信息
 			var warnMsg = msg;
 
@@ -106,7 +105,10 @@ function inputChange() {
 			$parent.append(okStart + okMsg + okEnd);
 
 			// 移除提醒和错误信息样式
-			revTipsCls(warnTips);
+			if($msgObj.hasClass("formTipsWarn")) {
+				$msgObj.removeClass("formTipsWarn");
+			}
+			$(obj).removeClass("eInputFocus");
 			$msgObj.addClass("undis");
 		}
 	}
