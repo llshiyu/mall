@@ -16,7 +16,6 @@ function inputChange() {
 	// 文本框失去焦点后
 	$('form :input').blur(function() {
 		var $parent = $(this).parent(), //获取input父元素
-			$msgObj = $(this).next("div").children(), // 获取信息提示部分隐藏的div
 			$formBoxObj = $parent.find(".formTipsBox"); // 获取信息提示框
 		
 			
@@ -59,7 +58,6 @@ function inputChange() {
 	}); //end blur
 	//登录，注册，个人中心修改页点击提交按钮是验证表单
 	var $parents = $('form :input').parent(), //获取input父元素
-		$msgObjs = $('form :input').next("div").children(), // 获取信息提示部分隐藏的div
 		$formBoxObjs = $parents.find(".formTipsBox"); // 获取信息提示框
 	$('#login-submit').click(function(e){
 		$formBoxObjs.children().remove();

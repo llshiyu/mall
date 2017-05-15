@@ -1,0 +1,42 @@
+@boxWidth: 380px;
+@imgWidth: 100px;
+@color: #4fb375;  //#0078D7
+.container{
+    padding: 60px 60px;
+    .box{
+        width: @boxWidth;
+        text-align: center;
+        padding: 10px 0;
+        border: 1px dashed @color;
+        position: relative;
+        .cont-img{
+            position: absolute;
+            top: -40px;
+            left: (@boxWidth - @imgWidth) / 2;
+            width: @imgWidth;
+            height: @imgWidth;
+            margin: 0 auto;
+            border-radius: 100%;
+            background-color: @color;
+            img{
+                width: @imgWidth;
+                height: @imgWidth;
+            }
+        }
+        .cont-user{
+            margin-top: 50px;
+            h1{
+                padding: 40px 0 20px;
+            }
+            h4{
+                padding-bottom: 15px;
+            }
+            span{
+                font-size: 16px;
+                padding-bottom: 15px;
+            }
+        }
+    }
+        
+        
+}

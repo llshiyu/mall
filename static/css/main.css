@@ -2,17 +2,6 @@
   padding-left: 20px;
   padding-right: 20px;
 }
-.nav-a {
-  padding-left: 0;
-}
-.nav-a a {
-  font-size: 15px;
-  color: #4fb375;
-}
-.nav-a a:hover {
-  text-decoration: none;
-  color: #429762;
-}
 .content-logo {
   margin-top: 10px;
   border-bottom: 1px solid #eee;
@@ -42,4 +31,7 @@
 }
 .content-logo .cart span {
   font-size: 20px;
+}
+.content-logo .cart .cart-a:hover {
+  text-decoration: none;
 }

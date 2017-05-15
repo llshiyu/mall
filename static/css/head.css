@@ -1,0 +1,33 @@
+a {
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+.nav-a {
+  padding-left: 0;
+}
+.nav-a a {
+  font-size: 15px;
+  color: #4fb375;
+}
+.nav-a a:hover {
+  color: #429762;
+}
+.user-a {
+  padding-left: 0;
+}
+.user-a a {
+  font-size: 18px;
+}
+.user-a a:hover {
+  color: #000000;
+}
+.user-a img {
+  width: 21px;
+  height: 21px;
+  border-radius: 20px;
+  background-color: #0078D7;
+  margin-right: 5px;
+}

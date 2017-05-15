@@ -1,0 +1,37 @@
+.container {
+  padding: 60px 60px;
+}
+.container .box {
+  width: 380px;
+  text-align: center;
+  padding: 10px 0;
+  border: 1px dashed #4fb375;
+  position: relative;
+}
+.container .box .cont-img {
+  position: absolute;
+  top: -40px;
+  left: 140px;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 100%;
+  background-color: #4fb375;
+}
+.container .box .cont-img img {
+  width: 100px;
+  height: 100px;
+}
+.container .box .cont-user {
+  margin-top: 50px;
+}
+.container .box .cont-user h1 {
+  padding: 40px 0 20px;
+}
+.container .box .cont-user h4 {
+  padding-bottom: 15px;
+}
+.container .box .cont-user span {
+  font-size: 16px;
+  padding-bottom: 15px;
+}

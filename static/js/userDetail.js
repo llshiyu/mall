@@ -34,7 +34,7 @@ $(function() {
 	var month = today.getMonth() + 1; //此方法获得的月份是从0---11，所以要加1才是当前月份
 	var day = today.getDate(); //获得当前日期
 
-	$('#startTime').val(year + '-' + getZero(month) + '-' + getZero(day));
+	$('#birthday').val(year + '-' + getZero(month) + '-' + getZero(day));
 	$.ajax({
 		type: "get",
 		url: url + '/user',

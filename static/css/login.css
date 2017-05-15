@@ -13,6 +13,13 @@
 .login label {
   font-family: "楷体";
 }
+.login .register-span {
+  padding-left: 20px;
+  vertical-align: -webkit-baseline-middle;
+}
+.login .register-span a {
+  color: #0078d7;
+}
 .logo {
   width: 100px;
   height: 100px;
