@@ -36,7 +36,7 @@ $(function() {
 			},
 			success: function(data) {
 				if(data.code == succCode){
-					$('#err-prompt').empty().append(data.message);
+					$('#err-prompt').empty().append(data.message+'，2s后跳转到主页');
 					
 					console.log(data.message);
 					console.log('2 :' + principal + ' ' + credentials + ' ' + captcha);
@@ -47,7 +47,7 @@ $(function() {
 				else {
 					changeCode();
 					console.log("data.code");
-					$('#err-prompt').empty().append('data.code 未成功');
+					$('#err-prompt').empty().append(data.message);
 				}
 			},
 			error: function() {
@@ -92,7 +92,7 @@ $(function() {
 				}
 				else {
 					changeCode();
-					$('#err-prompt').empty().append('data.code 未成功');
+					$('#err-prompt').empty().append(data.message);
 				}
 			},
 			error: function() {
@@ -119,3 +119,4 @@ function changeCode() {
 	event.cancelBubble = true;
 }
 
+//function 
