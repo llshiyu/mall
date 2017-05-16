@@ -4,19 +4,57 @@
 	<head>
 		<meta charset="UTF-8">
 		<link href="../../static/img/icon.ico" rel="shortcut icon"/>
-		<title>个人中心</title>
+		<title>飞鸟商城-个人中心</title>
 		<link rel="stylesheet" type="text/css" href="../../static/bootstrap/css/bootstrap.css" />
 		<link rel="stylesheet" type="text/css" href="../../static/css/user.css" />
 	</head>
 
 	<body>
+		<nav class="navbar navbar-default head navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+					<a class="navbar-brand" href="main.html" target="main">欢迎来到飞鸟商城</a>
+					<div class="navbar-brand nav-a">
+						<a href="login.html" target="main">请登录 </a>
+						<a href="register.html" target="main">免费注册</a>
+					</div>
+					<div class="navbar-brand user-a undis">
+						<a href="user.html" target="main">
+							<img src="../../static/img/bird.png" />
+							<span id="head-username">
+								张三
+							</span>
+						</a>
+					</div>
+					<span class="undis navbar-brand" id="err"></span>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="user.html" target="main">个人信息</a>
+						</li>
+						<li>
+							<a href="#">我的订单</a>
+						</li><li>
+							<a href="#" id="logout">退出</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 		<div class="container">
 			<div class="box">
 				<div class="cont-img">
-					<img src="../../static/img/bird.png"/>
+					<img src="../../static/img/bird.png" id="portrait"/>
 				</div>
 				<div class="cont-user">
-					<h1 id="nickname" class="nickname">肥鸟<a href="userDetail.html" id="user-detail" title="修改个人信息"><i class="glyphicon glyphicon-pencil"></i></a></h1>
+					<h1 class="nickname"><span id="nickname">肥鸟</span><a href="userDetail.html" id="user-detail" title="修改个人信息"><i class="glyphicon glyphicon-pencil"></i></a></h1>
 					<h4 id="phone" class="phone">13641190455</h4>
 					<span id="introduction" class="introduction">买买买，有钱任性。吃吃吃，减肥拜拜</span>
 					<div class="row text-left">
@@ -66,6 +104,7 @@
 		</div>
 		<script src="../../static/js/lib/jquery2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../static/bootstrap/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/js/head.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../static/js/user.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 

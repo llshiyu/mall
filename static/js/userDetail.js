@@ -72,19 +72,20 @@ $(function() {
 
 	//点击修改按钮
 	$('#user-detail-submit').click(function(e) {
+		
+		
 		var username = $('#username').val();
 		var nickname = $('#nickname').val();
 		var birthday = $('#birthday').val();
 		var phone = $('#phone').val();
 		var email = $('#email').val();
 		var introduction = $('#introduction').val();
-//		$('input:radio[name="gender"]:checked').val()
 		var gender = $('input:radio[name="gender"]:checked').val();  //选择被选中Radio的Value值
 		var genderNum = '';
 		if(gender == 'UNKNOW')genderNum = 0;
 		if(gender == 'MALE')genderNum = 1;
 		if(gender == 'FEMALE')genderNum = 2;
-		$('#err-prompt').empty().append(gender+' '+genderNum);
+//		$('#err-prompt').empty().append(gender+' '+genderNum);
 		
 		$.ajax({
 			type: "post",
@@ -100,10 +101,10 @@ $(function() {
 			},
 			success: function(data) {
 				if(data.code == succCode){
-					$('#err-prompt').empty().append('提交信息成功!!!!');
+					$('#err-prompt').empty().append('提交信息成功');
 				}
 				else{
-					$('#err-prompt').empty().append('提交信息失败??????????');
+					$('#err-prompt').empty().append('提交信息失败');
 				}
 			},
 			error: function() {

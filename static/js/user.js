@@ -17,6 +17,7 @@ $(function(){
 		success: function(data) {
 			if(data.code == succCode){
 				$('#err-prompt').empty().append(data);
+				$('#portrait').attr('src',url+data.data.portrait);
 				$('#username').empty().append(data.data.username);
 				$('#nickname').empty().append(data.data.nickname);
 				$('#birthday').empty().append(data.data.birthday);

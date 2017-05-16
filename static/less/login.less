@@ -1,4 +1,5 @@
 @import "config.less";
+@import "head.less";
 
 @form-width: 532px;
 @input-height: 34px;
@@ -12,24 +13,11 @@
         font-family: "楷体";
     }
 }
-.form-submit {
-//  margin-top: 20px;
-//  margin-left: @form-width / 3;
-}
-//登录页背景
-.login {
-    padding: 550px/3 450px;
-    background: url("../img/login-bg.png") no-repeat center left;
-    background-size: 40%;
-    label {
-        font-family: "楷体";
-    }
-    .register-span{
-        padding-left: 20px;
-        vertical-align: -webkit-baseline-middle;
-        a{
-            color: #0078d7;
-        }
+.jump-span{
+    padding-left: 20px;
+    vertical-align: -webkit-baseline-middle;
+    a{
+        color: #0078d7;
     }
 }
 .logo {
@@ -55,12 +43,21 @@
         margin-top: (@kaptcha-image-height - @input-height)/2;
     }
 }
+//登录页不同样式
+.login {
+    padding: 550px/3 450px;
+    background: url("../img/login-bg.png") no-repeat center left;
+    background-size: 40%;
+    label {
+        font-family: "楷体";
+    }
 
+}
 //注册页不同样式
 .register {
-    padding: 120px 400px;
-    background: url("../img/bird3.png") no-repeat center left;
-    background-size: 20%;
+    padding: 120px 100px;
+    background: url("../img/bird3.png") no-repeat center right;
+    background-size: 40%;
     .col-sm-3{
         width: 17% !important;
     }

@@ -10,7 +10,7 @@
 	</head>
 
 	<body>
-		<nav class="navbar navbar-default">
+		<nav class="navbar navbar-default head  navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -24,19 +24,25 @@
 						<a href="login.html" target="main">请登录 </a>
 						<a href="register.html" target="main">免费注册</a>
 					</div>
-					<div class="navbar-brand user-a ">
+					<div class="navbar-brand user-a undis">
 						<a href="user.html" target="main">
-							<img src="../../static/img/bird.png" />张三
+							<img src="../../static/img/bird.png" />
+							<span id="head-username">
+								张三
+							</span>
 						</a>
 					</div>
+					<span class="undis navbar-brand" id="err"></span>
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
 						<li>
-							<a href="userDetail.html" target="main">个人信息</a>
+							<a href="user.html" target="main">个人信息</a>
 						</li>
 						<li>
 							<a href="#">我的订单</a>
+						</li><li>
+							<a href="#" id="logout">退出</a>
 						</li>
 					</ul>
 				</div>

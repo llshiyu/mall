@@ -3,79 +3,114 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<link href="../../static/img/icon.ico" rel="shortcut icon"/>
-		<title>登录</title>
+		<link href="../../static/img/icon.ico" rel="shortcut icon" />
+		<title>飞鸟商城-登录</title>
 		<link rel="stylesheet" type="text/css" href="../../static/bootstrap/css/bootstrap.css" />
 		<link rel="stylesheet" type="text/css" href="../../static/css/login.css" />
 	</head>
 
 	<body>
-		
-		
-			<div class="container  login">
-				<!--<div class="img fl"></div>-->
-				<form id="form" class="form-horizontal">
-					<div class="form-group logo undis">
-						<a href="../index.html "></a>
+		<nav class="navbar navbar-default head navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+					<a class="navbar-brand" href="main.html" target="main">欢迎来到飞鸟商城</a>
+					<div class="navbar-brand nav-a">
+						<a href="login.html" target="main">请登录 </a>
+						<a href="register.html" target="main">免费注册</a>
 					</div>
-					<div class="form-group tit">
-						<h1>用户登录</h1>
+					<div class="navbar-brand user-a undis">
+						<a href="user.html" target="main">
+							<img src="../../static/img/bird.png" />
+							<span id="head-username">
+								张三
+							</span>
+						</a>
 					</div>
-					<div class="form-group">
-						<label for="principal" class="col-sm-2 control-label">用户名</label>
-						<div class="col-sm-10 clear">
-							<input type="text" class="form-control fl" id="principal" placeholder="用户名">
-							<div class="fl prompt">
-								<div class="">
-									<div class="formTipsBox"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="credentials" class="col-sm-2 control-label">密&nbsp;&nbsp;码</label>
-						<div class="col-sm-10 clear">
-							<input type="password" class="form-control fl" id="credentials" placeholder="密码">
-							<div class="fl prompt">
-								<div class="">
-									<div class="formTipsBox"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="captcha" class="col-sm-2 control-label">验证码</label>
-						<div class="col-sm-10 clear">
-							<input type="text" class="form-control kaptcha-input fl" id="captcha" maxlength="10" placeholder="验证码">
-							<div class="fr prompt captcha-prompt">
-								<div class="">
-									<div class="formTipsBox"></div>
-								</div>
-							</div>
-							<img src="" id="kaptchaImage" style="margin-bottom: -3px" class="kaptcha-image fl" />
-							<a href="#" onclick="changeCode()" class="fl captcha-a">看不清?换一张</a>
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-sm-offset-2 col-sm-10">
-							<p class="err-prompt" id="err-prompt"></p>
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-sm-offset-2 col-sm-10">
-							<button type="submit" class="btn btn-default form-submit" id="login-submit">登录</button>
-							<span class="register-span">没有账户？<a href="register.html">创建一个！</a></span>
-						</div>
-					</div>
-				</form>
-				
-				
+					<span class="undis navbar-brand" id="err"></span>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="user.html" target="main">个人信息</a>
+						</li>
+						<li>
+							<a href="#">我的订单</a>
+						</li><li>
+							<a href="#" id="logout">退出</a>
+						</li>
+					</ul>
+				</div>
 			</div>
-			
-		
+		</nav>
+		<div class="container  login">
+			<!--<div class="img fl"></div>-->
+			<form id="form" class="form-horizontal">
+				<div class="form-group logo undis">
+					<a href="../index.html "></a>
+				</div>
+				<div class="form-group tit">
+					<h1>用户登录</h1>
+				</div>
+				<div class="form-group">
+					<label for="principal" class="col-sm-2 control-label">用户名</label>
+					<div class="col-sm-10 clear">
+						<input type="text" class="form-control fl" id="principal" placeholder="用户名">
+						<div class="fl prompt">
+							<div class="">
+								<div class="formTipsBox"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="credentials" class="col-sm-2 control-label">密&nbsp;&nbsp;码</label>
+					<div class="col-sm-10 clear">
+						<input type="password" class="form-control fl" id="credentials" placeholder="密码">
+						<div class="fl prompt">
+							<div class="">
+								<div class="formTipsBox"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="captcha" class="col-sm-2 control-label">验证码</label>
+					<div class="col-sm-10 clear">
+						<input type="text" class="form-control kaptcha-input fl" id="captcha" maxlength="10" placeholder="验证码">
+						<div class="fr prompt captcha-prompt">
+							<div class="">
+								<div class="formTipsBox"></div>
+							</div>
+						</div>
+						<img src="" id="kaptchaImage" style="margin-bottom: -3px" class="kaptcha-image fl" />
+						<a href="#" onclick="changeCode()" class="fl captcha-a">看不清?换一张</a>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<p class="err-prompt" id="err-prompt"></p>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" class="btn btn-default form-submit" id="login-submit">登录</button>
+						<span class="jump-span">没有账户？<a href="register.html">创建一个！</a></span>
+					</div>
+				</div>
+			</form>
+
+		</div>
+
 		<script src="../../static/js/lib/jquery2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../static/bootstrap/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../../static/js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/js/input.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/js/head.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../static/js/login.js" type="text/javascript" charset="utf-8"></script>
 
 	</body>

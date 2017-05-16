@@ -1,45 +1,49 @@
 @import "config.less";
+@import "head.less";
 
 @form-width: 560px;
 @input-height: 34px;
-.tit {
-    margin-left: @form-width / 4 !important;
-    margin-bottom: 30px;
-    h1 {
-        font-family: "楷体";
-    }
-}
-.container{
-    padding: 120px 400px;
-    background: url("../img/user-bg.png") no-repeat center left;
-    background-size: 40%;
-}
-.form-group {
-    .form-control {
-        width: @form-width - (@form-width / 11.2)*5;
-        display: inline-block;
-        margin-right: 5px;
-    }
-}
-
-.date.col-sm-8{
-    width: 67.666667%;
-    .form-control{
-        margin-right: -2px;
-        width: inherit;
-    }
-    span{
-        display: inline-block;
-        height: @input-height;
-        width: 37px;
-        position: relative;
-        left: 0;
-    }
-}
-.user-span{
-        padding-left: 80px;
-        vertical-align: -webkit-baseline-middle;
-        a{
-            color: #0078d7;
+//.user-detail{
+    
+    .tit {
+        margin-left: @form-width / 4 !important;
+        margin-bottom: 30px;
+        h1 {
+            font-family: "楷体";
         }
     }
+    .container{
+        padding: 120px 400px;
+        background: url("../img/user-bg.png") no-repeat center left;
+        background-size: 40%;
+    }
+    .form-group {
+        .form-control {
+            width: @form-width - (@form-width / 11.2)*5;
+            display: inline-block;
+            margin-right: 5px;
+        }
+    }
+    
+    .date.col-sm-8{
+        width: 67.666667%;
+        .form-control{
+            margin-right: -2px;
+            width: inherit;
+        }
+        span{
+            display: inline-block;
+            height: @input-height;
+            width: 37px;
+            position: relative;
+            left: 0;
+        }
+    }
+    .user-span{
+            padding-left: 80px;
+            vertical-align: -webkit-baseline-middle;
+            a{
+                color: #0078d7;
+            }
+        }
+//}

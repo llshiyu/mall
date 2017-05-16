@@ -4,13 +4,51 @@
 	<head>
 		<meta charset="UTF-8">
 		<link href="../../static/img/icon.ico" rel="shortcut icon"/>
-		<title>个人中心修改</title>
+		<title>飞鸟商城-个人中心修改</title>
 		<link rel="stylesheet" type="text/css" href="../../static/bootstrap/css/bootstrap.css" />
 		<link rel="stylesheet" type="text/css" href="../../static/bootstrap/css/bootstrap-datetimepicker.css" />
 		<link rel="stylesheet" type="text/css" href="../../static/css/userDetail.css" />
 	</head>
 
 	<body>
+		<nav class="navbar navbar-default head navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+					<a class="navbar-brand" href="main.html" target="main">欢迎来到飞鸟商城</a>
+					<div class="navbar-brand nav-a">
+						<a href="login.html" target="main">请登录 </a>
+						<a href="register.html" target="main">免费注册</a>
+					</div>
+					<div class="navbar-brand user-a undis">
+						<a href="user.html" target="main">
+							<img src="../../static/img/bird.png" />
+							<span id="head-username">
+								张三
+							</span>
+						</a>
+					</div>
+					<span class="undis navbar-brand" id="err"></span>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="user.html" target="main">个人信息</a>
+						</li>
+						<li>
+							<a href="#">我的订单</a>
+						</li><li>
+							<a href="#" id="logout">退出</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 		<div class="container">
 			<form class="form-horizontal" id="form">
 				<div class="form-group tit">
@@ -107,8 +145,9 @@
 		<script src="../../static/js/lib/jquery2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../static/bootstrap/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../static/bootstrap/js/bootstrap-datetimepicker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/js/head.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../static/js/userDetail.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../../static/js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/js/input.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			$('.form-date').datetimepicker({
 				language: 'zh-CN',

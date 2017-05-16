@@ -1,44 +1,47 @@
 @import "config.less";
-
+@import "head.less";
 
 @aColor:#4FB375;    //#269abc
+.main{
+    padding: 50px 20px;
+    .content-logo{
+        margin-top: 10px;
+        border-bottom: 1px solid #eee;
+        height: 110px;
+        .logo{
+            padding-left: 85px;
+            a{
+                display: inline-block;
+                background: url(../img/bird.png) no-repeat center center;
+                background-size: 100%;
+                width: 100px;
+                height: 100px;
+            }
+        }
+        .col-md-4{
+            line-height: 100px;
+        }
+        .btn-search{
+            background-color: @aColor;
+        }
+        .cart{
+            .glyphicon{
+                color: #5E5E5E;
+            }
+            .icon-cart{
+                font-size: 20px;
+            }
+            span{
+                font-size: 20px;
+            }
+            .cart-a:hover{
+                text-decoration: none;
+            }
+        }
+    }
 
-.container-fluid{
-    padding-left: 20px;
-    padding-right: 20px;
 }
-.content-logo{
-    margin-top: 10px;
-    border-bottom: 1px solid #eee;
-    height: 110px;
-    .logo{
-        padding-left: 85px;
-        a{
-            display: inline-block;
-            background: url(../img/bird.png) no-repeat center center;
-            background-size: 100%;
-            width: 100px;
-            height: 100px;
-        }
-    }
-    .col-md-4{
-        line-height: 100px;
-    }
-    .btn-search{
-        background-color: @aColor;
-    }
-    .cart{
-        .glyphicon{
-            color: #5E5E5E;
-        }
-        .icon-cart{
-            font-size: 20px;
-        }
-        span{
-            font-size: 20px;
-        }
-        .cart-a:hover{
-            text-decoration: none;
-        }
-    }
-}
+//.container-fluid{
+//  padding-left: 20px;
+//  padding-right: 20px;
+//}
