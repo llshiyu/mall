@@ -18,12 +18,13 @@ $(function(){
 			if(data.code == succCode){
 				$('#err-prompt').empty().append(data);
 				$('#portrait').attr('src',url+data.data.portrait);
-				$('#username').empty().append(data.data.username);
-				$('#nickname').empty().append(data.data.nickname);
+				$('#username').empty().append(data.data.nickname);
+				$('#nickname').empty().append(data.data.username);
 				$('#birthday').empty().append(data.data.birthday);
 				$('#phone').empty().append(data.data.phone);
 				$('#email').empty().append(data.data.email);
 				$('#introduction').empty().append(data.data.introduction);
+				
 				if(data.data.gender == 'MALE'){
 					$('#gender').empty().append('男');
 				}

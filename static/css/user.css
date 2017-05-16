@@ -62,6 +62,13 @@ body {
   font-size: 14px;
   font-family: "楷体";
 }
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "楷体";
+}
 body {
   height: 100%;
   background: #fff;
@@ -263,4 +270,19 @@ input.eInputError:hover {
 }
 .container .box .cont-user .order {
   margin-top: 5px;
+}
+.container .box .cont-user .order a {
+  display: block;
+  padding: 5px 0;
+  position: relative;
+}
+.container .box .cont-user .order a span {
+  position: absolute;
+  top: 0;
+  padding: 0 1px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #e72429;
+  color: #fff;
+  font-size: 10px;
 }

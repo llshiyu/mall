@@ -3,7 +3,7 @@
 
 @boxWidth: 380px;
 @imgWidth: 100px;
-@color: #e72429;  //#0078D7  //e72429   //4fb375
+//@color: #e72429;  //#0078D7  //e72429   //4fb375
 .container{
     padding: 100px 560px;
     background: url("../img/user-bg.png") no-repeat center left;
@@ -12,7 +12,7 @@
         width: @boxWidth;
         text-align: center;
         padding: 10px 0;
-        border: 1px dashed @color;
+        border: 1px dashed @redColor;
         position: relative;
         .cont-img{
             position: absolute;
@@ -22,8 +22,8 @@
             height: @imgWidth + 2;
             margin: 0 auto;
             border-radius: @imgWidth;
-            background-color: @color;
-            border: 1px solid @color;
+            background-color: @redColor;
+            border: 1px solid @redColor;
             img{
                 width: @imgWidth;
                 height: @imgWidth;
@@ -57,7 +57,21 @@
             }
             .order{
                 margin-top: 5px;
-//              border-top: 1px dotted #E3E3E3;
+                a{
+                    display: block;
+                    padding: 5px 0;
+                    position: relative;
+                    span{
+                        position: absolute;
+                        top: 0;
+                        padding: 0 1px;
+                        border-radius: 10px;
+                        text-align: center;
+                        background-color: #e72429;
+                        color: #fff;
+                        font-size: 10px;
+                    }
+                }
             }
         }
     }

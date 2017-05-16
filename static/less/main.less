@@ -1,15 +1,18 @@
 @import "config.less";
 @import "head.less";
 
-@aColor:#4FB375;    //#269abc
+//@aColor:#4FB375;    //#269abc
 .main{
     padding: 50px 20px;
+        .row,.col-md-4{
+            padding: 0;
+            margin: 0 !important;
+        }
     .content-logo{
         margin-top: 10px;
-        border-bottom: 1px solid #eee;
         height: 110px;
         .logo{
-            padding-left: 85px;
+//          padding-left: 85px;
             a{
                 display: inline-block;
                 background: url(../img/bird.png) no-repeat center center;
@@ -18,13 +21,14 @@
                 height: 100px;
             }
         }
-        .col-md-4{
+        form{
             line-height: 100px;
         }
         .btn-search{
-            background-color: @aColor;
+            background-color: @greenColor;
         }
         .cart{
+            line-height: 100px;
             .glyphicon{
                 color: #5E5E5E;
             }
@@ -36,6 +40,41 @@
             }
             .cart-a:hover{
                 text-decoration: none;
+            }
+        }
+    }
+    .content-nav{
+        height: 40px;
+        line-height: 40px;
+        margin: 0 -20px !important;
+        border-bottom: 1px solid @greenColor;
+        span{
+            height: 39px;
+            display: inline-block;
+            border: 1px solid @greenColor;
+            padding: 0 20px;
+            background: @greenColor;
+            color: #fff;
+            font-size: 20px;
+        }
+        ul{
+            padding-left: 100px;
+            li{
+                float: left;
+                font-size: 20px;
+                font-weight: 700;
+                a{
+                    display: inline-block;
+                    text-decoration: none;
+                    height: 39px;
+                    width: 100%;
+                    text-align: center;
+                    &:hover{
+                        color: @greenColor;
+                        border-bottom: 2px solid @greenColor;
+                    }
+                }
+                
             }
         }
     }

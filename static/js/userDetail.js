@@ -89,22 +89,25 @@ $(function() {
 		
 		$.ajax({
 			type: "post",
-			url: url + '/user',
+			url: url + '/user/update',
 			data: {
-				_message: put,
-				principal: principal,
-				credentials: credentials,
-				captcha: captcha
+				username: username,
+				nickname: nickname,
+				birthday: birthday,
+				phone: phone,
+				email: email,
+				introduction: introduction,
+				gender: genderNum
 			},
 			xhrFields: {
 				withCredentials: true //支持附带详细信息
 			},
 			success: function(data) {
 				if(data.code == succCode){
-					$('#err-prompt').empty().append('提交信息成功');
+					$('#err-prompt').empty().append('提交信息成功 '+data.message);
 				}
 				else{
-					$('#err-prompt').empty().append('提交信息失败');
+					$('#err-prompt').empty().append('提交信息失败 '+data.message);
 				}
 			},
 			error: function() {
