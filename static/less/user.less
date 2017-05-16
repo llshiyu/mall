@@ -1,8 +1,10 @@
+@import "config.less";
+
 @boxWidth: 380px;
 @imgWidth: 100px;
 @color: #4fb375;  //#0078D7
 .container{
-    padding: 60px 60px;
+    padding: 100px 60px;
     .box{
         width: @boxWidth;
         text-align: center;
@@ -25,15 +27,32 @@
         }
         .cont-user{
             margin-top: 50px;
-            h1{
+            .nickname{
                 padding: 40px 0 20px;
+                position: relative; 
+                i{
+                    font-size: 15px;
+                    padding-left: 5px;
+                    position: absolute;
+                    top: 40px;
+                }
             }
-            h4{
+            .phone{
                 padding-bottom: 15px;
             }
-            span{
+            .introduction{
                 font-size: 16px;
-                padding-bottom: 15px;
+                display: inline-block;
+                margin-bottom: 40px;
+            }
+            .row{
+                margin: 0;
+                padding: 16px 0;
+                border-top: 1px dotted #E3E3E3;
+            }
+            .order{
+                margin-top: 5px;
+//              border-top: 1px dotted #E3E3E3;
             }
         }
     }

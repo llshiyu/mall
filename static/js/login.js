@@ -35,14 +35,19 @@ $(function() {
 				withCredentials: true //支持附带详细信息
 			},
 			success: function(data) {
-				$('#err-prompt').empty().append(data.message);
-				console.log(data.message);
-				console.log('2 :' + principal + ' ' + credentials + ' ' + captcha);
-				console.log(data);
-				console.log('succ');
-				if(data.code != succCode) {
+				if(data.code == succCode){
+					$('#err-prompt').empty().append(data.message);
+					
+					console.log(data.message);
+					console.log('2 :' + principal + ' ' + credentials + ' ' + captcha);
+					console.log(data);
+					console.log('succ');
+				}
+					
+				else {
 					changeCode();
 					console.log("data.code");
+					$('#err-prompt').empty().append('data.code 未成功');
 				}
 			},
 			error: function() {
@@ -79,12 +84,15 @@ $(function() {
 			},
 			//			crossDomain:true,//请求偏向外域
 			success: function(data) {
-				$('#err-prompt').empty().append(data.message);
-				console.log(data.message);
-				console.log(data);
-				console.log('succ');
-				if(data.code != succCode) {
+				if(data.code == succCode){
+					$('#err-prompt').empty().append(data.message);
+					console.log(data.message);
+					console.log(data);
+					console.log('succ');
+				}
+				else {
 					changeCode();
+					$('#err-prompt').empty().append('data.code 未成功');
 				}
 			},
 			error: function() {
