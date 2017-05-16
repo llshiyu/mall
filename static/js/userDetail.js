@@ -49,10 +49,10 @@ $(function() {
 				$('#phone').val(data.data.phone);
 				$('#email').val(data.data.email);
 				$('#introduction').val(data.data.introduction);
-				if(data.data.username == 'MALE'){
+				if(data.data.gender == 'MALE'){
 					$('#male').attr("checked",true);
 				}
-				else if(data.data.username == 'FEMALE'){
+				else if(data.data.gender == 'FEMALE'){
 					$('#female').attr("checked",true);
 				}
 				else{

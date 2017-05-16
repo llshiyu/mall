@@ -16,20 +16,21 @@ $(function(){
 		},
 		success: function(data) {
 			if(data.code == succCode){
-				$('#username').val(data.data.username);
-				$('#nickname').val(data.data.nickname);
-				$('#birthday').val(data.data.birthday);
-				$('#phone').val(data.data.phone);
-				$('#email').val(data.data.email);
-				$('#introduction').val(data.data.introduction);
-				if(data.data.username == 'MALE'){
-					$('#male').attr("checked",true);
+				$('#err-prompt').empty().append(data);
+				$('#username').empty().append(data.data.username);
+				$('#nickname').empty().append(data.data.nickname);
+				$('#birthday').empty().append(data.data.birthday);
+				$('#phone').empty().append(data.data.phone);
+				$('#email').empty().append(data.data.email);
+				$('#introduction').empty().append(data.data.introduction);
+				if(data.data.gender == 'MALE'){
+					$('#gender').empty().append('男');
 				}
-				else if(data.data.username == 'FEMALE'){
-					$('#female').attr("checked",true);
+				else if(data.data.gender == 'FEMALE'){
+					$('#gender').empty().append('女');
 				}
 				else{
-					$('#unknow').attr("checked",true);
+					$('#gender').empty().append('保密');
 				}
 			}
 			else{
