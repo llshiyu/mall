@@ -104,10 +104,13 @@ $(function() {
 			},
 			success: function(data) {
 				if(data.code == succCode){
-					$('#err-prompt').empty().append('提交信息成功 '+data.message);
+					$('#err-prompt').empty().append('提交信息 '+data.message+'，2s后返回个人中心');
+					setTimeout(function(){
+						jumpPage('/user');
+					},2000);
 				}
 				else{
-					$('#err-prompt').empty().append('提交信息失败 '+data.message);
+					$('#err-prompt').empty().append('提交信息 '+data.message);
 				}
 			},
 			error: function() {
@@ -127,4 +130,19 @@ function getZero(d) {
 		return '0' + d;
 	}
 	return d;
+}
+
+function jumpPage(page){
+	$.ajax({
+		type:"get",
+		url:url+page,
+		success: function(data){
+			$('#err-prompt').empty().append('成功');
+			$('body').empty().append(data);
+		},
+		error: function(){
+			console.log('接口错误');
+			$('#err-prompt').empty().append('接口错误---跳转时');
+		}
+	});
 }

@@ -276,13 +276,10 @@ input.eInputError:hover {
   padding: 5px 0;
   position: relative;
 }
-.container .box .cont-user .order a span {
+.container .box .cont-user .order a .badge {
   position: absolute;
   top: 0;
-  padding: 0 1px;
-  border-radius: 10px;
-  text-align: center;
-  background-color: #e72429;
-  color: #fff;
+  padding: 2px 4px;
   font-size: 10px;
+  background: #e72429;
 }

@@ -113,8 +113,11 @@ $(function() {
 		}
 		$('#warse-num').html(num);
 		$('#total').html(price.toFixed(2));
-	})
+	});
+	//删除
+	$('#del').click(function(e){
+		$(this).parents('tr').addClass('undis');
+		e.preventDefault();
+	});
 	
-	
-	
-})
+});

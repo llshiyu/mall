@@ -254,6 +254,14 @@ input.eInputError:hover {
 }
 .main .content-logo .cart span {
   font-size: 20px;
+  margin-right: 10px;
+  position: relative;
+}
+.main .content-logo .cart span .badge {
+  font-size: 12px;
+  padding: 2px 4px;
+  position: absolute;
+  top: -5px;
 }
 .main .content-logo .cart .cart-a:hover {
   text-decoration: none;
