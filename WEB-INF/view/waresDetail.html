@@ -62,18 +62,42 @@
 				</div>
 			</div>
 			<div class="cont-detail clear">
-				<ul class="detail-tit clear fl">
+				<ul class="detail-tit clear fl tabDemo">
 					<li class="active"><a href="#">商品介绍</a></li>
-					<li><a href="#">规格与包装</a></li>
-					<li><a href="customerService.html" target="cust-ser">售后保障</a></li>
+					<li class="more-tit"><a href="#">规格与包装</a></li>
+					<li><a href="#">售后保障</a></li>
 				</ul>
 				<div class="btn btn-default fr">加入购物车</div>
 			</div>
-			
+			<div class="tabDemoCon">
+				<div class="">
+					<iframe src="waresIntroduction.html" width="100%" height="600" scrolling="no" frameborder="0" name="waresIntro" id="waresIntro" onload="iFrameHeight('waresIntro')"></iframe>
+				</div>
+				<div class="undis more-cont">
+					<iframe src="specifications.html" width="100%" height="600" scrolling="no" frameborder="0" name="spec" id="spec" onload="iFrameHeight('spec')" ></iframe>
+				</div>
+				<div class="undis">
+					<iframe src="customerService.html" width="100%" height="600"  frameborder="0" name="custSer" id="custSer" onload="iFrameHeight('custSer')"></iframe>
+				</div>
+			</div>
+				
 		</div>
 		<script src="../../static/js/lib/jquery2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../static/bootstrap/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../static/js/waresDetail.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function iFrameHeight(id) {
+			    var ifm= document.getElementById(id);
+			    var subWeb = document.frames ? document.frames[id].document :ifm.contentDocument;
+			    if(ifm != null && subWeb != null) {
+			    ifm.height = subWeb.body.scrollHeight;
+			    }
+			}
+			function goToMore(){
+				$('.more-tit').addClass('active').siblings().removeClass('active');
+				$('.more-cont').removeClass('undis').siblings().addClass('undis');
+			}
+		</script>
 	</body>
 
 </html>

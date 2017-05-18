@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset='UTF-8'>
+		<link href='../../static/img/icon.ico' rel='shortcut icon' />
+		<title>飞鸟商城-购物车</title>
+		<link rel='stylesheet' type='text/css' href='../../static/bootstrap/css/bootstrap.css' />
+		<link rel='stylesheet' type='text/css' href='../../static/css/cart.css' />
+	</head>
+
+	<body>
+		<nav class='navbar navbar-default head navbar-fixed-top'>
+			<div class='container-fluid'>
+				<div class='navbar-header'>
+					<button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1' aria-expanded='false'>
+		        <span class='sr-only'>Toggle navigation</span>
+		        <span class='icon-bar'></span>
+		        <span class='icon-bar'></span>
+		        <span class='icon-bar'></span>
+		      </button>
+					<a class='navbar-brand' href='main.html' target='main'>欢迎来到飞鸟商城</a>
+					<div class='navbar-brand nav-a'>
+						<a href='login.html' target='main'>请登录 </a>
+						<a href='register.html' target='main'>免费注册</a>
+					</div>
+					<div class='navbar-brand user-a undis'>
+						<a href='user.html' target='main'>
+							<img src='../../static/img/bird.png' />
+							<span id='head-username'>
+								张三
+							</span>
+						</a>
+					</div>
+					<span class='undis navbar-brand' id='err'></span>
+				</div>
+				<div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
+					<ul class='nav navbar-nav navbar-right'>
+						<li>
+							<a href='user.html' target='main'>个人信息</a>
+						</li>
+						<li>
+							<a href='#'>我的订单</a>
+						</li>
+						<li>
+							<a href='#' id='logout'>退出</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class='container'>
+			<div class='cont-logo row'>
+				<div class='logo col-md-4'>
+					<a href='main.html'></a>
+					<img src='../../static/img/logo-tit2.png' />
+				</div>
+			</div>
+			<div class='cont-tit'>
+				<span>全部商品</span>
+			</div>
+			<div class='cont-table table-responsive'>
+				<table class='table'>
+					<thead>
+						<tr>
+							<th class='th-input'>
+								<input type='checkbox' name='select' id='all-up' value='0' onclick='qx()' /><label for='all-up'>全选</label>
+							</th>
+							<th class='text-center'>商品</th>
+							<th></th>
+							<th>单价</th>
+							<th>数量</th>
+							<th>小计</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='cart-wares'>
+							<td class='th-input'>
+								<input type='checkbox' name='select' value='' onclick='cx()' />
+							</td>
+							<td class='clear th-tit'>
+								<div class='wares-img fl'>
+									<img src='../../static/img/bird3.png' />
+								</div>
+								<div class='wares-tit fl'>
+									<div class='p-name'>
+										<a href='#'>飞鸟 肥鸟 4X 全网通版 2GB+16GB 香槟金 移动联通电信4G手机</a>
+									</div>
+								</div>
+							</td>
+							<td class='th-type'>
+								<div class='type-color'>颜色：金</div>
+								<div class='type-size'>尺寸：2GB 16GB</div>
+							</td>
+							<td class='c-price'><span>¥</span><strong>2299.00</strong></td>
+							<td>
+								<div class='c-amount'>
+									<a href='#' class='nominus reduce'>-</a><input type='text' class='text' value='1' />
+									<a href='#' class='plus'>+</a>
+								</div>
+							</td>
+							<td class='c-total'><span>¥</span><strong class="wares-price">2299.00</strong></td>
+
+							<td class='type-del'>
+								<a href='#'>删除</a>
+							</td>
+						</tr>
+						<tr class='cart-wares'>
+							<td class='th-input'>
+								<input type='checkbox' name='select' value='' onclick='cx()' />
+							</td>
+							<td class='clear th-tit'>
+								<div class='wares-img fl'>
+									<img src='../../static/img/bird3.png' />
+								</div>
+								<div class='wares-tit fl'>
+									<div class='p-name'>
+										<a href='#'>飞鸟 肥鸟 4X 全网通版 2GB+16GB 香槟金 移动联通电信4G手机</a>
+									</div>
+								</div>
+							</td>
+							<td class='th-type'>
+								<div class='type-color'>颜色：金</div>
+								<div class='type-size'>尺寸：2GB 16GB</div>
+							</td>
+							<td class='c-price'><span>¥</span><strong>2299.00</strong></td>
+							<td>
+								<div class='c-amount'>
+									<a href='#' class='nominus reduce'>-</a><input type='text' class='text' value='1' />
+									<a href='#' class='plus'>+</a>
+								</div>
+							</td>
+							<td class='c-total'><span>¥</span><strong  class="wares-price">2299.00</strong></td>
+
+							<td class='type-del'>
+								<a href='#'>删除</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class='options-tab navbar-fixed-bottom'>
+				<div class='container clear'>
+					<ul class='cont-left clear fl'>
+						<li><input type='checkbox' name='select' id='all-down' value='0' onclick="fqx()" /><label for='all-down'>全选</label></li>
+						<li>
+							<a href='#'>删除选中的商品</a>
+						</li>
+					</ul>
+					<ul class='cont-right clear fr'>
+						<li>已选择 <span class='green-price' id="warse-num">0</span> 件商品</li>
+						<li>总价：<span class='green-price all-price'>￥<strong id="total">0.00</strong></span></li>
+						<li>
+							<div class='btn btn-danger'>去结算</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src='../../static/js/lib/jquery2.1.4.min.js' type='text/javascript' charset='utf-8'></script>
+		<script src='../../static/bootstrap/js/bootstrap.js' type='text/javascript' charset='utf-8'></script>
+		<script src='../../static/js/head.js' type='text/javascript' charset='utf-8'></script>
+		<script src='../../static/js/cart.js' type='text/javascript' charset='utf-8'></script>
+		<script>
+			//全选
+			var cb = document.getElementsByName("select");
+			var l = cb.length;
+			//上面的全选
+			function qx() {
+				for(var i = 0; i < l - 1; i++) {
+					if(cb[0].checked) {
+						cb[i + 1].checked = true;
+					} else {
+						cb[i + 1].checked = false;
+					}
+				}
+			}
+			//下面的全选
+			function fqx() {
+				for(var i = 0; i < l - 1; i++) {
+					if(cb[l - 1].checked) {
+						cb[i].checked = true;
+					} else {
+						cb[i].checked = false;
+					}
+				}
+			}
+			//每一个单个的选择
+			function cx() {
+				for(var i = 0; i < l; i++) {
+					if(cb[0].checked) {
+						for(var i = 0; i < l; i++) {
+							if(cb[i].checked == false) {
+								cb[0].checked = false;
+								cb[l - 1].checked = false;
+							}
+						}
+					} else {
+						if(cb[i].checked == true && cb[i + 1].checked == true) {
+							cb[0].checked = true;
+							cb[l - 1].checked = true;
+						}
+					}
+				}
+			}
+		</script>
+
+	</body>
+
+</html>

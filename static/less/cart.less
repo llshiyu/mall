@@ -1,0 +1,182 @@
+@import "config.less";
+@import "head.less";
+a {
+    text-decoration: none !important;
+}
+label {
+    cursor: pointer;
+}
+
+.red-price {
+    color: @redColor;
+}
+
+.green-price {
+    color: @greenColor;
+}
+.container {
+    margin-top: 52px;
+    .cont-logo {
+        .logo {
+            a {
+                display: inline-block;
+                background: url("../img/bird.png") no-repeat center center;
+                background-size: 100%;
+                width: 100px;
+                height: 100px;
+            }
+            img {
+                width: 200px;
+                vertical-align: super;
+            }
+        }
+    }
+    .cont-tit {
+        margin-top: 40px;
+        font-size: 20px;
+        font-weight: 600;
+        color: @greenColor;
+        border-bottom: 1px solid @greenColor;
+    }
+    .cont-table {
+        margin-bottom: 55px;
+        table {
+            .th-input {
+                position: relative;
+                padding-right: 40px;
+                input {
+                    position: absolute;
+                    top: 8px;
+                    left: 8px;
+                    margin-right: 5px;
+                }
+                label {
+                    position: absolute;
+                    top: 8px;
+                    left: 26px;
+                }
+            }
+            .cart-wares.active{
+                background: rgba(79,179,117,.3);//rgb(79,179,117)
+            }
+            .cart-wares {
+                .th-input {
+                    width: 56px;
+                }
+                .th-tit {
+                    width: 370px;
+                    .wares-img {
+                        height: 100px;
+                        width: 100px;
+                        img {
+                            width: 100px;
+                            height: 100px;
+                        }
+                    }
+                    .wares-tit {
+                        width: 250px;
+                        .p-name {
+                            a {
+                                color: #333;
+                                &:hover {
+                                    color: @greenColor;
+                                }
+                            }
+                        }
+
+                    }
+                }
+                .th-type {
+                    }
+                .c-amount {
+                    width: 99px;
+                    a{
+                        background: url(../img/icon_mount.gif) no-repeat;
+                        background-size: 100%;
+                        height: 13px;
+                        width: 13px;
+                        float: left;
+                        border: 1px solid #c9c9c9;
+                        overflow: hidden;
+                        text-decoration: none;
+                        text-indent: -999em;
+                        &:hover{
+                            border: 1px solid @greenColor;
+                        }
+                    }
+                    .nominus {
+                        margin: 3px 4px 0 0;
+                        background-position: 0 0;
+                        cursor: default;
+                        color: #4e4e4e;
+                    }
+                    .minus {
+                        margin: 3px 4px 0 0;
+                        background-position: 0 -11px;
+                    }
+                    .text {
+                        width: 34px;
+                        height: 20px;
+                        line-height: 20px;
+                        background: #fff;
+                        border: solid 1px #dbe0e6;
+                        border-top: 1px solid #aaadb2;
+                        color: #4e4e4e;
+                        float: left;
+                        text-align: center;
+                    }
+                    .plus {
+                        margin: 3px 0 0 4px;
+                        background-position: 0 -34px;
+                    }
+                    
+                    
+                    
+                }
+                .type-del {
+                    a {
+                        &:hover {
+                            color: @greenColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .options-tab {
+        background: #fff;
+        height: 50px;
+        box-shadow: 0 -1px 8px rgba(0,1,1,.08);
+        .container {
+            margin: 0 auto;
+            ul {
+                li {
+                    float: left;
+                    line-height: 50px;
+                }
+            }
+            .cont-left {
+                input{
+                    margin-right: 5px;
+                }
+                li {
+                    padding-right: 10px;
+                }
+                a:hover {
+                    color: @greenColor;
+                }
+            }
+            .cont-right {
+                li {
+                    padding-left: 10px;
+                }
+                .btn {
+                    border-color: @greenColor;
+                    background: @greenColor;
+                    margin-left: 10px;
+                }
+            }
+        }
+
+    }
+}

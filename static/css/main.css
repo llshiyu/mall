@@ -233,6 +233,10 @@ input.eInputError:hover {
   width: 100px;
   height: 100px;
 }
+.main .content-logo .logo img {
+  width: 200px;
+  vertical-align: super;
+}
 .main .content-logo form {
   line-height: 100px;
 }

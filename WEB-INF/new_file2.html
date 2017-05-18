@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>我是投资者</title>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				color: #727272;
+				font-size: 12px;
+				outline: none;
+			}
+			
+			table {
+				border-collapse: collapse;
+				border-spacing: 0;
+			}
+			
+			a {
+				color: #3A3A3A;
+				text-decoration: none;
+				color: #575757;
+			}
+			
+			a:hover {
+				text-decoration: none;
+			}
+			
+			.L_user .mailspage {
+				background: #fff;
+			}
+			
+			.L_user .mailspage .mail {
+				padding-bottom: 25px;
+			}
+			
+			.L_user .mailspage .mail p {
+				margin: 0px 0 5px 5px;
+				padding-top: 5px;
+			}
+			
+			.L_user .mailspage .mail table {
+				width: 745px;
+				text-align: center;
+			}
+			
+			.L_user .mailspage .mail .table_box {
+				width: 745px;
+				border: 1px solid #DDDDDD;
+				margin: 0 0 0px 10px;
+			}
+			
+			.L_user .mailspage .mail .firsttr {
+				border-top: none;
+			}
+			
+			.L_user .mailspage .mail td {
+				height: 30px;
+				line-height: 30px;
+			}
+			
+			.L_user .mailspage .sendmsm {
+				margin-top: 25px;
+			}
+			
+			.L_user .mailspage .sendmsm div {
+				margin: 0 0 10px 40px;
+			}
+			
+			.L_user .mailspage .sendmsm div label {
+				width: 50px;
+				text-align: right;
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 5px;
+			}
+			
+			.L_user .mailspage .sendmsm div input {
+				margin-right: 5px;
+				border: 1px solid #ccc;
+				height: 20px;
+				line-height: 20px;
+				padding-left: 5px;
+				vertical-align: middle;
+				border-radius: 5px;
+			}
+			
+			.L_user .mailspage .sendmsm div textarea {
+				width: 270px;
+				height: 130px;
+				vertical-align: top;
+				border: 1px solid #ccc;
+				padding: 5px;
+				border-radius: 5px;
+			}
+			
+			.L_user .mailspage .sendmsm div a {
+				width: 108px;
+				height: 35px;
+				display: inline-block;
+				background: url(../images/L_btn0615.jpg) no-repeat -8px -72px;
+				vertical-align: middle;
+				margin-right: 10px;
+			}
+			
+			.L_user .mailspage .sendmsm div a:hover {
+				background-position: -8px -115px;
+			}
+			
+			.L_user .mailspage {
+				width: 768px;
+				border: 1px solid #E5E5E5;
+				float: left;
+				overflow: hidden;
+			}
+			
+			.L_user .mailspage .loantab {
+				background: #fff;
+				border-bottom: 1px solid #E5E5E5;
+			}
+			
+			.L_user .mailspage .loantab a {
+				width: 127px;
+				height: 40px;
+				border: 1px solid #E5E5E5;
+				border-bottom: none;
+				display: inline-block;
+				text-align: center;
+				border-left: none;
+				border-top: none;
+				line-height: 40px;
+				color: #464646;
+				font-weight: bold;
+			}
+			
+			.L_user .mailspage .loantab a.c {
+				background: #F4F4F4;
+				color: #CF161C;
+			}
+			
+			.L_user .mailspage .mail .markbtn a {
+				width: 64px;
+				height: 27px;
+				background: url(../images/L_btn0615.jpg) no-repeat -4px -6px;
+				display: inline-block;
+				text-align: center;
+				line-height: 25px;
+				vertical-align: middle;
+			}
+			
+			.L_user .mailspage .mail .markbtn a:hover {
+				background-position: -4px -37px;
+			}
+			
+			.L_user .mailspage .mail .firsttr {
+				background: #F9F9F9;
+				border-bottom: 1px solid #DDDDDD;
+				border-top: 1px solid #DDDDDD;
+				height: 20px;
+				line-height: 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="L_user clear-fix">
+			<div class="mailspage">
+				<div class="loantab">
+					<a href="javascript:void(0)" class="c">收件箱</a>
+					<a href="javascript:void(0)">已发送</a>
+					<a href="javascript:void(0)">发信息</a>
+				</div>
+				<div class="mail">
+					<p class="markbtn">
+						<a href="javascript:void(0)" class="deletebtn">删除</a>
+						<a href="javascript:void(0)">标记已读</a>
+						<a href="javascript:void(0)">标记未读</a>
+					</p>
+					<div class="table_box">
+						<table>
+							<tr id="titletr">
+								<td class="firsttr"><input type="checkbox" id="allcheckbox" /></td>
+								<td class="firsttr"><img src="images/L_mail.png" /></td>
+								<td class="firsttr">发件人</td>
+								<td class="firsttr">标题</td>
+								<td class="firsttr">发送时间</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" /></td>
+								<td>3</td>
+								<td>XXX</td>
+								<td>XXX</td>
+								<td>XXX</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" /></td>
+								<td>3</td>
+								<td>XXX</td>
+								<td>XXX</td>
+								<td>XXX</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" /></td>
+								<td>3</td>
+								<td>XXX</td>
+								<td>XXX</td>
+								<td>XXX</td>
+							</tr>
+						</table>
+						<p class="page">共0条
+							<a href="javascript:void(0)">首页</a>
+							<a href="javascript:void(0)">上一页</a>
+							<a href="javascript:void(0)">下一页</a>
+							<a href="javascript:void(0)">尾页</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			//删除选中： 
+			$(".markbtn .deletebtn").click(function() {
+				$(".table_box tr").each(function() {
+					if($(this).find("input").attr("checked") && $(this).index() != 0) {
+						$(this).remove();
+					}
+				})
+			})
+			$("#allcheckbox").click(function() {
+				if($(this).attr("checked")) {
+					$(".table_box td input").attr("checked", "checked");
+				} else {
+					$(".table_box td input").attr("checked", "")
+				}
+			})
+			$(".table_box input").not("#allcheckbox").click(function() {
+				$(".table_box input").not("#allcheckbox").each(function() {
+					if($(".table_box input[type='checkbox']:checked").not("#allcheckbox").length == $(".table_box tr").not("#titletr").length) {
+						$("#allcheckbox").attr("checked", "checked");
+					} else {
+						$("#allcheckbox").attr("checked", "");
+					}
+				})
+			})
+		</script>
+	</body>
+
+</html>

@@ -17,7 +17,10 @@ $(function(){
 		success: function(data) {
 			if(data.code == succCode){
 				$('#err-prompt').empty().append(data);
-				$('#portrait').attr('src',url+data.data.portrait);
+				if(data.data.portrait == ''){
+					$('#portrait').attr('src','../../static/img/bird.png');
+				}
+				else $('#portrait').attr('src',url+data.data.portrait);
 				$('#username').empty().append(data.data.nickname);
 				$('#nickname').empty().append(data.data.username);
 				$('#birthday').empty().append(data.data.birthday);

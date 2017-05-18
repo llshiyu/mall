@@ -329,6 +329,9 @@ input.eInputError:hover {
 .cont-detail .detail-tit .active a {
   color: #fff;
 }
+.cont-detail .detail-tit .active:hover a {
+  color: #fff;
+}
 .cont-detail .btn {
   margin-top: 5px;
   margin-right: 5px;
