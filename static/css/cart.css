@@ -181,6 +181,12 @@ input.eInputError:hover {
 .navbar {
   margin: 0;
 }
+.navbar .container {
+  margin-top: 0;
+}
+.navbar .container .navbar-brand {
+  margin-left: 0;
+}
 .head a {
   text-decoration: none;
 }
@@ -295,7 +301,7 @@ label {
   width: 99px;
 }
 .container .cont-table table .cart-wares .c-amount a {
-  background: url(../img/icon_mount.gif) no-repeat;
+  background: url("../img/icon_mount.gif") no-repeat;
   background-size: 100%;
   height: 13px;
   width: 13px;

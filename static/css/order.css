@@ -220,89 +220,152 @@ input.eInputError:hover {
   background-color: #0078D7;
   margin-right: 5px;
 }
-.main {
-  padding: 50px 20px;
+a {
+  text-decoration: none !important;
 }
-.main .row,
-.main .col-md-4 {
-  padding: 0;
-  margin: 0 !important;
+.order {
+  margin-top: 52px;
 }
-.main .content-logo {
-  margin-top: 10px;
-  height: 110px;
-}
-.main .content-logo .logo a {
+.order .cont-logo .logo a {
   display: inline-block;
-  background: url(../img/bird.png) no-repeat center center;
+  background: url("../img/bird.png") no-repeat center center;
   background-size: 100%;
   width: 100px;
   height: 100px;
 }
-.main .content-logo .logo img {
+.order .cont-logo .logo img {
   width: 200px;
   vertical-align: super;
 }
-.main .content-logo form {
-  line-height: 100px;
+.order .order-cont {
+  margin-top: 30px;
 }
-.main .content-logo .btn-search {
-  background-color: #4fb375;
+.order .order-cont ul {
+  border-bottom: 2px solid #e8e8e8;
 }
-.main .content-logo .cart {
-  line-height: 100px;
-}
-.main .content-logo .cart .glyphicon {
-  color: #5E5E5E;
-}
-.main .content-logo .cart .icon-cart {
-  font-size: 20px;
-}
-.main .content-logo .cart span {
-  font-size: 20px;
-  margin-right: 10px;
-  position: relative;
-}
-.main .content-logo .cart span .badge {
-  font-size: 12px;
-  padding: 2px 4px;
-  position: absolute;
-  top: -5px;
-}
-.main .content-logo .cart .cart-a:hover {
-  text-decoration: none;
-}
-.main .content-nav {
-  height: 40px;
-  line-height: 40px;
-  margin: 0 -20px !important;
-  border-bottom: 1px solid #4fb375;
-}
-.main .content-nav span {
-  height: 39px;
-  display: inline-block;
-  border: 1px solid #4fb375;
-  padding: 0 35px;
-  background: #4fb375;
-  color: #fff;
-  font-size: 20px;
-}
-.main .content-nav ul {
-  padding-left: 100px;
-}
-.main .content-nav ul li {
+.order .order-cont ul li {
   float: left;
-  font-size: 20px;
+}
+.order .order-cont ul li .tit-text {
+  display: inline-block;
+  padding: 0 40px 12px;
+  font-size: 18px;
   font-weight: 700;
 }
-.main .content-nav ul li a {
-  display: inline-block;
-  text-decoration: none;
-  height: 39px;
-  width: 100%;
-  text-align: center;
+.order .order-cont ul li .tit-line {
+  color: #e8e8e8;
 }
-.main .content-nav ul li a:hover {
+.order .order-cont ul li:hover a {
   color: #4fb375;
+}
+.order .order-cont ul .active {
   border-bottom: 2px solid #4fb375;
+  margin-bottom: -2px;
+}
+.order .order-cont ul .active a {
+  color: #4fb375;
+}
+.order .order-cont .form {
+  margin-top: 30px;
+}
+.order .order-cont .form .form-order .btn-search {
+  background: #4fb375;
+  border-color: #4fb375;
+}
+.order .order-cont .form .form-text {
+  padding-top: 10px;
+}
+.order .order-cont .form .form-text .text-more {
+  cursor: pointer;
+}
+.order .order-cont .form .form-text .text-more i {
+  padding-left: 5px;
+  font-size: 10px;
+  color: #ccc;
+}
+.order .order-cont .form .form-text .text-more:hover {
+  color: #4fb375;
+}
+.order .order-cont .select-more {
+  margin-top: 20px;
+  height: 30px;
+  line-height: 30px;
+}
+.order .order-cont .select-more span {
+  padding-right: 20px;
+}
+.order .order-cont .select-more ul {
+  border: none;
+}
+.order .order-cont .select-more ul li {
+  float: left;
+  cursor: pointer;
+  padding: 0 10px;
+  margin: 0 5px;
+  height: 30px;
+  line-height: 30px;
+}
+.order .order-cont .select-more ul li:hover {
+  background: #4fb375;
+  color: #fff;
+}
+.order .order-cont .select-more ul .active {
+  background: #4fb375;
+  color: #fff;
+}
+.order-table {
+  margin-top: 30px;
+}
+.order-table .sep-row {
+  height: 20px;
+}
+.order-table .tr-th {
+  border: 1px solid #e5e5e5;
+  background: #f5f5f5;
+  height: 31px;
+  line-height: 31px;
+  color: #aaa;
+  overflow: hidden;
+}
+.order-table .tr-th .gap {
+  width: 10px;
+  display: inline-block;
+}
+.order-table .tr-th .dealtime {
+  margin-right: 30px;
+}
+.order-table .tr-bd {
+  text-align: center;
+  vertical-align: top;
+}
+.err-page {
+  height: 200px;
+  width: 500px;
+  margin: 100px auto;
+}
+.err-page .left-text {
+  padding-top: 70px;
+  padding-right: 20px;
+}
+.err-page .left-text h4 {
+  padding-bottom: 20px;
+  line-height: 30px;
+}
+.err-page .left-text .btn {
+  padding: 4px 6px;
+  margin-right: 6px;
+}
+.err-page .left-text .btn a {
+  color: #000;
+}
+.err-page .left-text .btn-danger {
+  background: #4fb375;
+  border-color: #4fb375;
+}
+.err-page .left-text .btn-danger a {
+  color: #fff;
+}
+.err-page .right-img img {
+  height: 200px;
+  width: 200px;
 }

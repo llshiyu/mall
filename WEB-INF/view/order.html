@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link href='../../static/img/icon.ico' rel='shortcut icon' />
+		<title>飞鸟商城-订单</title>
+		<link rel="stylesheet" type="text/css" href="../../static/bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="../../static/css/order.css" />
+	</head>
+
+	<body>
+		<nav class='navbar navbar-default head navbar-fixed-top'>
+			<div class='container'>
+				<div class='navbar-header'>
+					<button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1' aria-expanded='false'>
+		        <span class='sr-only'>Toggle navigation</span>
+		        <span class='icon-bar'></span>
+		        <span class='icon-bar'></span>
+		        <span class='icon-bar'></span>
+		      </button>
+					<a class='navbar-brand' href='main.html'>欢迎来到飞鸟商城</a>
+					<div class='navbar-brand nav-a'>
+						<a href='login.html'>请登录 </a>
+						<a href='register.html'>免费注册</a>
+					</div>
+					<div class='navbar-brand user-a undis'>
+						<a href='user.html'>
+							<img src='../../static/img/bird.png' />
+							<span id='head-username'>
+								张三
+							</span>
+						</a>
+					</div>
+					<span class='undis navbar-brand' id='err'></span>
+				</div>
+				<!--<div class='collapse navbar-collapse'>-->
+				<ul class='nav navbar-nav navbar-right'>
+					<li>
+						<a href='user.html'>个人信息</a>
+					</li>
+					<li>
+						<a href='#'>我的订单</a>
+					</li>
+					<li>
+						<a href='#' id='logout'>退出</a>
+					</li>
+				</ul>
+				<!--</div>-->
+			</div>
+		</nav>
+		<div class="container order">
+			<div class='cont-logo row'>
+				<div class='logo col-md-4'>
+					<a href='main.html'></a>
+					<img src='../../static/img/logo-tit2.png' />
+				</div>
+			</div>
+			<div class="order-cont sleect-id">
+				<ul class="clear tabDemo">
+					<li class="active">
+						<a href="#"><span class="tit-text">所有订单</span></a><span class="tit-line">|</span></li>
+					<li>
+						<a href="#"><span class="tit-text">待付款</span></a><span class="tit-line">|</span></li>
+					<li>
+						<a href="#"><span class="tit-text">待发货</span></a><span class="tit-line">|</span></li>
+					<li>
+						<a href="#"><span class="tit-text">待收货</span></a><span class="tit-line">|</span></li>
+					<li>
+						<a href="#"><span class="tit-text">待评价</span></a>
+					</li>
+				</ul>
+				<div class="tabDemoCon">
+					<!--所有订单-->
+					<div class="all-order">
+						<div class="form clear">
+							<form class="form-order col-md-4">
+								<div class="input-group">
+									<input type="text" class="form-control" placeholder="输入商品标题或者订单号进行搜索" />
+									<span class="input-group-btn">  
+						               <button class="btn btn-info btn-search">订单搜索</button>  
+						            </span>
+								</div>
+							</form>
+							<div class="form-text col-md-4" id="select-btn">
+								<span class="text-more">更多筛选条件<i class="glyphicon glyphicon-chevron-down"></i></span>
+								<span class="text-more undis">精选筛选条件<i class="glyphicon glyphicon-chevron-up"></i></span>
+							</div>
+						</div>
+						<div class="select-more clear undis sleect-id" id="select-more">
+							<span class="fl">订单类型：</span>
+							<ul class="clear fl">
+								<li class="active">全部类型</li>
+								<li>手机</li>
+								<li>平板</li>
+								<li>笔记本</li>
+								<li>电视</li>
+								<li>配件</li>
+							</ul>
+						</div>
+						<!--有数据的页面-->
+						<div class="order-table table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th class="text-center">宝贝</th>
+										<th class="text-center">单价</th>
+										<th class="text-center">数量</th>
+										<th class="text-center">商品操作</th>
+										<th class="text-center">实付款</th>
+										<th class="text-center">交易状态</th>
+										<th class="text-center">交易操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="sep-row"><td colspan="5"></td></tr>
+									<tr class="tr-th">
+										<td colspan="7">
+											<span class="gap"></span>
+											<span class="dealtime">2017-05-08 13:54:31</span>
+											<span class="number">订单号：<a href="#">53862676454</a></span>
+											
+										</td>
+									</tr>
+									<tr class="tr-bd">
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<!--待付款    empty-page 空页面 -->
+					<div class="undis pending-payment">
+
+					</div>
+					<!--待发货-->
+					<div class="undis shipment-pending">
+
+					</div>
+					<!--待收货-->
+					<div class="undis goods-to-be-received">
+
+					</div>
+					<!--待评价-->
+					<div class="undis pending-evaluation">
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<script src='../../static/js/lib/jquery2.1.4.min.js' type='text/javascript' charset='utf-8'></script>
+		<script src='../../static/bootstrap/js/bootstrap.js' type='text/javascript' charset='utf-8'></script>
+		<script src='../../static/js/head.js' type='text/javascript' charset='utf-8'></script>
+		<script src="../../static/js/order.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

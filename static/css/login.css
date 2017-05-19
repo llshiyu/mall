@@ -181,6 +181,12 @@ input.eInputError:hover {
 .navbar {
   margin: 0;
 }
+.navbar .container {
+  margin-top: 0;
+}
+.navbar .container .navbar-brand {
+  margin-left: 0;
+}
 .head a {
   text-decoration: none;
 }

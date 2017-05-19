@@ -1,0 +1,167 @@
+@import "config.less";
+@import "head.less";
+a {
+    text-decoration: none !important;
+}
+.order {
+    margin-top: 52px;
+    .cont-logo {
+        .logo {
+            a {
+                display: inline-block;
+                background: url("../img/bird.png") no-repeat center center;
+                background-size: 100%;
+                width: 100px;
+                height: 100px;
+            }
+            img {
+                width: 200px;
+                vertical-align: super;
+            }
+        }
+    }
+    .order-cont {
+        margin-top: 30px;
+        ul {
+            border-bottom: 2px solid #e8e8e8;
+            li {
+
+                float: left;
+                .tit-text {
+                    display: inline-block;
+                    padding: 0 40px 12px;
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+                .tit-line {
+                    color: #e8e8e8;
+                }
+                &:hover {
+                    a {
+                        color: @greenColor;
+                    }
+                }
+            }
+            .active {
+                border-bottom: 2px solid @greenColor;
+                margin-bottom: -2px;
+                a {
+                    color: @greenColor;
+                }
+
+            }
+        }
+        .form {
+            margin-top: 30px;
+            .form-order {
+                .btn-search {
+                    background: @greenColor;
+                    border-color: @greenColor;
+                }
+            }
+            .form-text {
+                padding-top: 10px;
+                .text-more {
+                    cursor: pointer;
+                    i {
+                        padding-left: 5px;
+                        font-size: 10px;
+                        color: #ccc;
+                    }
+                    &:hover {
+                        color: @greenColor;
+                    }
+                }
+            }
+        }
+        .select-more {
+            margin-top: 20px;
+            height: 30px;
+            line-height: 30px;
+            span {
+                padding-right: 20px;
+            }
+            ul {
+                border: none;
+                li {
+                    float: left;
+                    cursor: pointer;
+                    padding: 0 10px;
+                    margin: 0 5px;
+                    height: 30px;
+                    line-height: 30px;
+                    &:hover {
+                        background: @greenColor;
+                        color: #fff;
+                    }
+                }
+                .active {
+                    background: @greenColor;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+//有数据的页面
+.order-table {
+    margin-top: 30px;
+    .sep-row {
+        height: 20px;
+    }
+    .tr-th {
+        border: 1px solid #e5e5e5;
+        background: #f5f5f5;
+        height: 31px;
+        line-height: 31px;
+        color: #aaa;
+        overflow: hidden;
+        .gap {
+            width: 10px;
+            display: inline-block;
+        }
+        .dealtime {
+            margin-right: 30px;
+        }
+    }
+    .tr-bd {
+        text-align: center;
+        vertical-align: top;
+    }
+}
+//404页面
+.err-page {
+    height: 200px;
+    width: 500px;
+    margin: 100px auto;
+
+    .left-text {
+        padding-top: 70px;
+        padding-right: 20px;
+        h4 {
+            padding-bottom: 20px;
+            line-height: 30px;
+        }
+        .btn {
+            padding: 4px 6px;
+            margin-right: 6px;
+            a {
+                color: #000;
+            }
+        }
+        .btn-danger {
+            background: @greenColor;
+            border-color: @greenColor;
+            a {
+                color: #fff;
+            }
+        }
+    }
+    .right-img {
+        img {
+            height: 200px;
+            width: 200px;
+        }
+    }
+
+}
