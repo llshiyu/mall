@@ -18,7 +18,7 @@ $(function(){
 			if(data.code == succCode){
 				$('#err-prompt').empty().append(data);
 				if(data.data.portrait == ''){
-					$('#portrait').attr('src','../../static/img/bird.png');
+					$('#portrait').attr('src','../../static/img/bird.jpg');
 				}
 				else{
 					$('#portrait').attr('src',url+data.data.portrait);

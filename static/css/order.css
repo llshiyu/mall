@@ -250,7 +250,7 @@ a {
 }
 .order .cont-logo .logo a {
   display: inline-block;
-  background: url("../img/bird.png") no-repeat center center;
+  background: url("../img/bird.jpg") no-repeat center center;
   background-size: 100%;
   width: 100px;
   height: 100px;
@@ -432,7 +432,7 @@ a {
   display: inline-block;
   width: 20px;
   height: 20px;
-  background: url("../img/icon-type.png") no-repeat;
+  background: url("../img/icon-type.jpg") no-repeat;
 }
 .order-table .tr-bd .bd-img-tit .tit .seven {
   background-position: 0 0;

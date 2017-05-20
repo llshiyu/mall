@@ -261,7 +261,7 @@ input.eInputError:hover {
   height: 100px;
 }
 .logo a {
-  background: url("../img/bird.png") no-repeat center center;
+  background: url("../img/bird.jpg") no-repeat center center;
   background-size: 100%;
   display: block;
   width: 100px;
@@ -279,7 +279,7 @@ input.eInputError:hover {
 }
 .login {
   padding: 183.33333333px 450px;
-  background: url("../img/login-bg.png") no-repeat center left;
+  background: url("../img/login-bg.jpg") no-repeat center left;
   background-size: 40%;
 }
 .login label {
@@ -287,7 +287,7 @@ input.eInputError:hover {
 }
 .register {
   padding: 120px 100px;
-  background: url("../img/bird3.png") no-repeat center right;
+  background: url("../img/bird3.jpg") no-repeat center right;
   background-size: 40%;
 }
 .register .col-sm-3 {

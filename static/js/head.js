@@ -20,7 +20,7 @@ $(function(){
 				$('.user-a').removeClass('undis');
 				$('#head-username').empty().append(data.message);
 				if(data.portrait == '' || data.portrait == undefined){
-					$('#head-username').siblings('img').attr('src','../../static/img/bird.png');
+					$('#head-username').siblings('img').attr('src','../../static/img/bird.jpg');
 				}else{
 					$('#head-username').siblings('img').attr('src',url+data.data.portrait);
 				}
