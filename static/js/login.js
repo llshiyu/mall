@@ -4,7 +4,7 @@
  * */
 
 //form跳转路径
-var actionUrl = '../index.html';
+var actionUrl = '/main.html';
 //接口地址
 var url = 'http://120.24.68.200:8080';
 var succCode = 200;

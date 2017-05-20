@@ -11,7 +11,7 @@
 
 	<body>
 		<nav class="navbar navbar-default head  navbar-fixed-top">
-			<div class="container-fluid">
+			<div class="container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 		        <span class="sr-only">Toggle navigation</span>
@@ -19,13 +19,13 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-					<a class="navbar-brand" href="main.html" target="main">欢迎来到飞鸟商城</a>
+					<a class="navbar-brand main-page" href="#">欢迎来到飞鸟商城</a>
 					<div class="navbar-brand nav-a">
-						<a href="login.html" target="main">请登录 </a>
-						<a href="register.html" target="main">免费注册</a>
+						<a href="#" class="login-page">请登录 </a>
+						<a href="#" class="register-page">免费注册</a>
 					</div>
 					<div class="navbar-brand user-a undis">
-						<a href="user.html" target="main">
+						<a href="#" class="user-page">
 							<img src="../../static/img/bird.jpg" />
 							<span id="head-username">
 								张三
@@ -34,20 +34,20 @@
 					</div>
 					<span class="undis navbar-brand" id="err"></span>
 				</div>
-				<!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
 						<li>
-							<a href="user.html" target="main">个人信息</a>
+							<a href="#" class="user-page">个人信息</a>
 						</li><li>
-							<a href="cart.html">我的购物车</a>
+							<a href="#" class="cart-page">我的购物车</a>
 						</li>
 						<li>
-							<a href="order.html">我的订单</a>
+							<a href="#" class="order-page">我的订单</a>
 						</li><li>
 							<a href="#" id="logout">退出</a>
 						</li>
 					</ul>
-				<!--</div>-->
+				</div>
 			</div>
 		</nav>
 		<script src="../../static/js/lib/jquery2.1.4.min.js" type="text/javascript" charset="utf-8"></script>

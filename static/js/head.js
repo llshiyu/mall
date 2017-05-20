@@ -45,6 +45,32 @@ $(function(){
 		logout();
 		e.preventDefault();
 	});
+	
+	$('.main-page').click(function(e){
+		jumpPage('/main.html');
+		e.preventDefault();
+	});
+	$('.login-page').click(function(e){
+		jumpPage('/login.html');
+		e.preventDefault();
+	});
+	$('.register-page').click(function(e){
+		jumpPage('/register.html');
+		e.preventDefault();
+	});
+	$('.user-page').click(function(e){
+		jumpPage('/user.html');
+		e.preventDefault();
+	});
+	$('.cart-page').click(function(e){
+		jumpPage('/cart.html');
+		e.preventDefault();
+	});
+	$('.order-page').click(function(e){
+		jumpPage('/order.html');
+		e.preventDefault();
+	});
+	
 });
 
 function logout(){
@@ -69,3 +95,21 @@ function logout(){
 	});
 }
 
+//跳转页面
+function jumpPage(page){
+	$.ajax({
+		type:"get",
+		url:url+page,
+		success: function(data){
+			$('#err-prompt').empty().append('成功');
+			$('body').empty().append(data);
+		},
+		error: function(){
+			console.log('接口错误');
+			$('#err-prompt').empty().append('接口错误---跳转时');
+		}
+	});
+	
+	
+//	return $(a).attr('href',url+page);
+}
