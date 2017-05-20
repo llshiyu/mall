@@ -38,7 +38,9 @@
 				<ul class='nav navbar-nav navbar-right'>
 					<li>
 						<a href='user.html'>个人信息</a>
-					</li>
+					</li><li>
+							<a href="cart.html">我的购物车</a>
+						</li>
 					<li>
 						<a href='#'>我的订单</a>
 					</li>
@@ -98,42 +100,8 @@
 								<li>配件</li>
 							</ul>
 						</div>
-						<!--有数据的页面-->
-						<div class="order-table table-responsive">
-							<table class="table">
-								<thead>
-									<tr>
-										<th class="text-center">宝贝</th>
-										<th class="text-center">单价</th>
-										<th class="text-center">数量</th>
-										<th class="text-center">商品操作</th>
-										<th class="text-center">实付款</th>
-										<th class="text-center">交易状态</th>
-										<th class="text-center">交易操作</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="sep-row"><td colspan="5"></td></tr>
-									<tr class="tr-th">
-										<td colspan="7">
-											<span class="gap"></span>
-											<span class="dealtime">2017-05-08 13:54:31</span>
-											<span class="number">订单号：<a href="#">53862676454</a></span>
-											
-										</td>
-									</tr>
-									<tr class="tr-bd">
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
+						<div id="succPage" class="undis"></div>
+						
 					</div>
 					<!--待付款    empty-page 空页面 -->
 					<div class="undis pending-payment">
@@ -155,6 +123,24 @@
 
 			</div>
 		</div>
+		<!--删除-->
+	<div class="modal fade" id="delModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	                <h4 class="modal-title text-left" id="myModalLabel">提示</h4>
+	            </div>
+	            <div class="modal-body" del-text>
+	            	<div class="text-center">你确定要删除该订单吗？</div>
+	            </div>
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-primary" data-dismiss="modal" id="del">确定</button>
+	                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
 		<script src='../../static/js/lib/jquery2.1.4.min.js' type='text/javascript' charset='utf-8'></script>
 		<script src='../../static/bootstrap/js/bootstrap.js' type='text/javascript' charset='utf-8'></script>
 		<script src='../../static/js/head.js' type='text/javascript' charset='utf-8'></script>

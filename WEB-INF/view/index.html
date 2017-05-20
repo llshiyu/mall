@@ -8,8 +8,18 @@
 	</head>
 
 	<body>
-		<iframe frameborder="0" src="head.html" name="head" width="100%" height="60px" id="head" allowTransparency="true"></iframe>
-		<iframe name="main" frameborder="0" height="1000px" width="100%" src="main.html" id="main" allowTransparency="true"></iframe>	
+		<!--<iframe frameborder="0" src="head.html" name="head" width="100%" height="60px" id="head" allowTransparency="true"></iframe>-->
+		<iframe name="main" frameborder="0" height="1" width="100%" src="main.html" id="main" allowTransparency="true"  onload="iFrameHeight('main')"></iframe>	
+	
+	<script type="text/javascript">
+			function iFrameHeight(id) {
+			    var ifm= document.getElementById(id);
+			    var subWeb = document.frames ? document.frames[id].document :ifm.contentDocument;
+			    if(ifm != null && subWeb != null) {
+			    ifm.height = subWeb.body.scrollHeight;
+			    }
+			}
+		</script>
 	</body>
 
 </html>

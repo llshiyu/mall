@@ -74,7 +74,11 @@ body {
     font-size: 14px;
     font-family: "楷体";
 }
-h1,h2,h3,h4,h5{
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-family: "楷体";
 }
 body {
@@ -125,12 +129,12 @@ legend {
 
 .container {
     padding: 0;
-//  margin: 0 auto;
-//  margin: 0;
+    //  margin: 0 auto;
+    //  margin: 0;
 }
 #form {
     width: @form-width;
-//  margin: 100px auto 0;
+    //  margin: 100px auto 0;
 }
 input.eInputFocus,
 input:focus {
@@ -150,7 +154,7 @@ input.eInputError:hover {
 .kaptcha-image {
     width: @kaptcha-image-width;
     height: @kaptcha-image-height;
-//  margin-right: 5px;
+    //  margin-right: 5px;
 }
 .formTipsOk {
     position: relative;
@@ -201,9 +205,33 @@ input.eInputError:hover {
     margin-left: 0;
     margin-right: 0;
 }
-.navbar{
+.navbar {
     margin: 0;
 }
-body{
-//  background: url(../img/bg.png) ;
+.red-price {
+    color: @redColor;
+}
+
+.green-price {
+    color: @greenColor;
+}
+.grey-price {
+    color: #aaa;
+}
+
+//模态框--删除
+.modal {
+    .modal-header {
+        padding: 10px;
+        background: #f3f3f3;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+    .modal-body {
+        font-size: 20px;
+    }
+    .btn-primary{
+        background: @greenColor;
+        border-color: @greenColor;
+    }
 }

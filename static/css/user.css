@@ -181,6 +181,28 @@ input.eInputError:hover {
 .navbar {
   margin: 0;
 }
+.red-price {
+  color: #e72429;
+}
+.green-price {
+  color: #4fb375;
+}
+.grey-price {
+  color: #aaa;
+}
+.modal .modal-header {
+  padding: 10px;
+  background: #f3f3f3;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.modal .modal-body {
+  font-size: 20px;
+}
+.modal .btn-primary {
+  background: #4fb375;
+  border-color: #4fb375;
+}
 .navbar .container {
   margin-top: 0;
 }
@@ -220,19 +242,19 @@ input.eInputError:hover {
   background-color: #0078D7;
   margin-right: 5px;
 }
-.container {
+.user {
   padding: 100px 560px;
   background: url("../img/user-bg.png") no-repeat center left;
   background-size: 50%;
 }
-.container .box {
+.user .box {
   width: 380px;
   text-align: center;
   padding: 10px 0;
   border: 1px dashed #e72429;
   position: relative;
 }
-.container .box .cont-img {
+.user .box .cont-img {
   position: absolute;
   top: -40px;
   left: 140px;
@@ -243,46 +265,46 @@ input.eInputError:hover {
   background-color: #e72429;
   border: 1px solid #e72429;
 }
-.container .box .cont-img img {
+.user .box .cont-img img {
   width: 100px;
   height: 100px;
   border-radius: 100px;
 }
-.container .box .cont-user {
+.user .box .cont-user {
   margin-top: 50px;
 }
-.container .box .cont-user .nickname {
+.user .box .cont-user .nickname {
   padding: 40px 0 20px;
   position: relative;
 }
-.container .box .cont-user .nickname i {
+.user .box .cont-user .nickname i {
   font-size: 15px;
   padding-left: 5px;
   position: absolute;
   top: 40px;
 }
-.container .box .cont-user .phone {
+.user .box .cont-user .phone {
   padding-bottom: 15px;
 }
-.container .box .cont-user .introduction {
+.user .box .cont-user .introduction {
   font-size: 16px;
   display: inline-block;
   margin-bottom: 40px;
 }
-.container .box .cont-user .row {
+.user .box .cont-user .row {
   margin: 0;
   padding: 16px 0;
   border-top: 1px dotted #E3E3E3;
 }
-.container .box .cont-user .order {
+.user .box .cont-user .order {
   margin-top: 5px;
 }
-.container .box .cont-user .order a {
+.user .box .cont-user .order a {
   display: block;
   padding: 5px 0;
   position: relative;
 }
-.container .box .cont-user .order a .badge {
+.user .box .cont-user .order a .badge {
   position: absolute;
   top: 0;
   padding: 2px 4px;

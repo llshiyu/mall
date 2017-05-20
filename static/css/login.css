@@ -181,6 +181,28 @@ input.eInputError:hover {
 .navbar {
   margin: 0;
 }
+.red-price {
+  color: #e72429;
+}
+.green-price {
+  color: #4fb375;
+}
+.grey-price {
+  color: #aaa;
+}
+.modal .modal-header {
+  padding: 10px;
+  background: #f3f3f3;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.modal .modal-body {
+  font-size: 20px;
+}
+.modal .btn-primary {
+  background: #4fb375;
+  border-color: #4fb375;
+}
 .navbar .container {
   margin-top: 0;
 }

@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<link href="../../static/img/icon.ico" rel="shortcut icon"/>
+		<link href="../../static/img/icon.ico" rel="shortcut icon" />
 		<title>飞鸟商城-主页</title>
 		<link rel="stylesheet" type="text/css" href="../../static/bootstrap/css/bootstrap.css" />
 		<link rel="stylesheet" type="text/css" href="../../static/css/main.css" />
@@ -11,7 +11,7 @@
 
 	<body>
 		<nav class="navbar navbar-default head navbar-fixed-top">
-			<div class="container-fluid">
+			<div class="container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 		        <span class="sr-only">Toggle navigation</span>
@@ -35,67 +35,199 @@
 					<span class="undis navbar-brand" id="err"></span>
 				</div>
 				<!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
-					<ul class="nav navbar-nav navbar-right">
-						<li>
-							<a href="user.html" target="main">个人信息</a>
-						</li>
-						<li>
-							<a href="order.html">我的订单</a>
-						</li><li>
-							<a href="#" id="logout">退出</a>
-						</li>
-					</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="user.html" target="main">个人信息</a>
+					</li>
+					<li>
+						<a href="cart.html">我的购物车</a>
+					</li>
+					<li>
+						<a href="order.html">我的订单</a>
+					</li>
+					<li>
+						<a href="#" id="logout">退出</a>
+					</li>
+				</ul>
 				<!--</div>-->
 			</div>
 		</nav>
-		<div class="container-fluid main">
+		<div class="container main">
 			<div class="content-logo row">
 				<div class="logo col-md-4">
 					<a href="#"></a>
-					<img src="../../static/img/logo-tit2.png"/>
+					<img src="../../static/img/logo-tit2.png" />
 				</div>
 				<form class="form-horizontal col-md-4">
-					<div class="input-group">  
-				       <input type="text" class="form-control" placeholder="请输入字段名" />  
-			            <span class="input-group-btn">  
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="请输入字段名" />
+						<span class="input-group-btn">  
 			               <button class="btn btn-info btn-search">查找</button>  
-			            </span>  
-					 </div>
+			            </span>
+					</div>
 				</form>
 				<div class="cart col-md-4 text-center">
 					<a href="cart.html" class="cart-a">
 						<i class="glyphicon glyphicon-shopping-cart icon-cart"></i>
 						<span>我的购物车<span class="badge">2</span></span>
 						<i class="glyphicon glyphicon-chevron-right icon-next"></i>
-					</a>						
+					</a>
 				</div>
 			</div>
-			<nav class="content-nav row">
+			<nav class="content-nav row" id="content-nav">
 				<span class="col-md-2">精选商品分类</span>
 				<ul class="clear col-md-10">
-					<li class="col-md-2"><a href="">首页</a></li>
-					<li class="col-md-2"><a href="">飞鸟手机</a></li>
-					<li class="col-md-2"><a href="">平板</a></li>
-					<li class="col-md-2"><a href="">笔记本</a></li>
-					<li class="col-md-2"><a href="">配件</a></li>
+					<li class="col-md-2 active">
+						<a href="">首页</a>
+					</li>
+					<li class="col-md-2">
+						<a href="">飞鸟手机</a>
+					</li>
+					<li class="col-md-2">
+						<a href="">平板</a>
+					</li>
+					<li class="col-md-2">
+						<a href="">笔记本</a>
+					</li>
+					<li class="col-md-2">
+						<a href="">配件</a>
+					</li>
 				</ul>
 			</nav>
+
 			<div class="content-wares">
-				<iframe src="waresDetail.html" width="100%" height="600" frameborder="0" scrolling="no" name="waresDetail" id="waresDetail" onload="iFrameHeight('waresDetail')"></iframe>
+				<iframe src="main-index.html" width="100%" height="600" frameborder="0" scrolling="no" name="waresDetail" class="" id="waresIndex" onload="iFrameHeight('waresIndex')"></iframe>
+				<iframe src="waresDetail.html" width="100%" height="600" frameborder="0" scrolling="no" name="waresDetail" class="undis" id="waresDetail" onload="iFrameHeight('waresDetail')"></iframe>
+			</div>
+
+		</div>
+		<!--footer-->
+		<div class="footer">
+			<div class="container-fluid foot">
+				<div class="footer-service">
+					<ul class="list-service clear">
+						<li>
+							<a href="javascript:;"><i class="iconfont icon-gongju"></i>预约维修服务</a>
+						</li>
+						<li>
+							<a href="javascript:;"><i class="iconfont icon-7"></i>7天无理由退货</a>
+						</li>
+						<li>
+							<a href="javascript:;"><i class="iconfont icon-15"></i>15天免费换货</a>
+						</li>
+						<li>
+							<a href="javascript:;"><i class="iconfont icon-liwu"></i>满150元包邮</a>
+						</li>
+						<li>
+							<a href="javascript:;"><i class="iconfont icon-weizhi"></i>520余家售后网点</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-links clear">
+					<dl class="col-links">
+						<dt>帮助中心</dt>
+						<dd>
+							<a href="javascript:;">账户管理</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">购物指南</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">订单操作</a>
+						</dd>
+					</dl>
+					<dl class="col-links">
+						<dt>服务支持</dt>
+						<dd>
+							<a href="javascript:;">售后政策</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">自助服务</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">相关下载</a>
+						</dd>
+					</dl>
+					<dl class="col-links">
+						<dt>线下门店</dt>
+						<dd>
+							<a href="javascript:;">飞鸟之家</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">服务网点</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">零售网点</a>
+						</dd>
+					</dl>
+					<dl class="col-links">
+						<dt>关于飞鸟</dt>
+						<dd>
+							<a href="javascript:;">了解飞鸟</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">加入飞鸟</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">联系我们</a>
+						</dd>
+					</dl>
+					<dl class="col-links">
+						<dt>关注我们</dt>
+						<dd>
+							<a href="javascript:;">新浪微博</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">飞鸟部落</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">官方微信</a>
+						</dd>
+					</dl>
+					<dl class="col-links">
+						<dt>特色服务</dt>
+						<dd>
+							<a href="javascript:;">F码通道</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">礼物码</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">防伪查询</a>
+						</dd>
+					</dl>
+					<div class="col-contact">
+						<p class="phone">400-100-5678</p>
+						<p>
+							<span>周一至周日 8:00-18:00</span>
+							<br /> （仅收市话费）
+						</p>
+						<a href="javascript:;" class="btn btn-line-primary btn-small">
+							<i class="iconfont icon-liuyan"></i>24小时在线客服
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
+		<!--footer end-->
 		<script src="../../static/js/lib/jquery2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../static/bootstrap/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../static/js/head.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../static/js/main.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
+			//去详情页
+			function gotoDetail() {
+				$('#waresDetail').removeClass('undis');
+				$('#waresIndex').addClass('undis');
+			};
+			//iframe 自动适应高度
 			function iFrameHeight(id) {
-			    var ifm= document.getElementById(id);
-			    var subWeb = document.frames ? document.frames[id].document :ifm.contentDocument;
-			    if(ifm != null && subWeb != null) {
-			    ifm.height = subWeb.body.scrollHeight;
-			    }
-			}
+				var ifm = document.getElementById(id);
+				var subWeb = document.frames ? document.frames[id].document : ifm.contentDocument;
+				if(ifm != null && subWeb != null) {
+					ifm.height = subWeb.body.scrollHeight;
+				}
+			};
 		</script>
 	</body>
 

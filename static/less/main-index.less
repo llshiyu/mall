@@ -1,0 +1,283 @@
+@import "config.less";
+
+a {
+    text-decoration: none !important;
+}
+a:hover{
+    color: @greenColor;
+}
+body {
+//  background: #f5f5f5;
+}
+.row{
+    padding: 0;
+    margin: 0;
+}
+.col-md-2,.col-md-10{
+    padding: 0;
+    margin: 0;
+}
+.main-index{
+    margin-top: 20px;
+//  .box-hd{
+//      height: 58px;
+//      line-height: 58px;
+//      .title{
+//          font-size: 22px;
+//          font-weight: 200;
+//          line-height: 58px;
+//          color: #333;
+//      }
+//      .tab-list{
+//          list-style-type: none;
+//          font-size: 16px;
+//          li {
+//              display: inline-block;
+//              margin: 0 0 0 30px;
+//              color: #424242;
+//              height: 43px;
+//              border-bottom: 2px solid #f5f5f5;
+//              border-bottom: 2px solid transparent;
+//              -webkit-transition: border-color 0.5s;
+//              transition: border-color 0.5s;
+//              cursor: pointer;
+//              float: left;
+//          }
+//          li:hover {
+//              color: @greenColor;
+//              border-bottom: 2px solid @greenColor;
+//          }
+//          .tab-active {
+//              color: @greenColor;
+//              border-bottom: 2px solid @greenColor;
+//          }
+//      }
+//  }
+    .box-bd{
+        height: 614px;
+        .bd-left{
+            width: 20.666667%;
+            .brick-item {
+                position: relative;
+                z-index: 1;
+                float: left;
+                width: 220px;
+                margin-bottom: 14px;
+                background: #fff;
+                -webkit-transition: all 0.2s linear;
+                transition: all 0.2s linear;
+            }
+            .brick-item-m {
+                height: 300px;
+                padding: 0;
+                img {
+                    height: 300px;
+                    width: 220px;
+                }
+            }
+            .brick-item-active {
+                -webkit-box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+                box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+                -webkit-transform: translate3d(0, -2px, 0);
+                transform: translate3d(0, -2px, 0);
+            }
+        }
+        .bd-right{
+            width: 79.333333%;
+            .brick-list{
+                .brick-item {
+                    position: relative;
+                    z-index: 1;
+                    float: left;
+                    width: 218px;
+                    margin-left: 14px;
+                    margin-bottom: 14px;
+                    background: #fff;
+                    -webkit-transition: all 0.2s linear;
+                    transition: all 0.2s linear;
+                    //打折
+                    .flag-saleoff {
+                        background-color: #e53935;
+                    }
+                    //新品
+                    .flag-new {
+                        background-color: #83c44e;
+                        z-index: 5;
+                    }
+                    .flag {
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        z-index: 2;
+                        width: 64px;
+                        height: 20px;
+                        margin-left: -32px;
+                        font-size: 12px;
+                        line-height: 20px;
+                        text-align: center;
+                        color: #fff;
+                    }
+                }
+                .brick-item-active {
+                    -webkit-box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+                    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+                    -webkit-transform: translate3d(0, -2px, 0);
+                    transform: translate3d(0, -2px, 0);
+                    .review-wrapper {
+                        height: 76px;
+                        opacity: 1;
+                        filter:alpha(opacity=100);
+                    }
+                }
+                 .brick-item-m {
+                    height: 300px;
+                    padding: 34px 0 20px;
+                    .figure-img {
+                        width: 150px;
+                        height: 150px;
+                        margin: 0 auto 18px;
+                        img {
+                            width: 150px;
+                            height: 150px;
+                        }
+                    }
+                    .title {
+                        color: #333;
+                        margin: 0 10px;
+                        font-size: 14px;
+                        font-weight: 400;
+                        text-align: center;
+                    }
+                    .desc {
+                        margin: 0 10px 10px;
+                        height: 18px;
+                        font-size: 12px;
+                        text-align: center;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        _zoom: 1;
+                        color: #b0b0b0;
+                    }
+                    .price {
+                        margin: 0 10px 10px;
+                        text-align: center;
+                        color: @greenColor;
+                        del {
+                            color: #b0b0b0;
+                            text-decoration: line-through;
+                        }
+                    }
+                    .rank {
+                        margin: 0 10px;
+                        font-size: 12px;
+                        text-align: center;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        _zoom: 1;
+                        color: #b0b0b0;
+                    }
+                    .review-wrapper {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        z-index: 3;
+                        width: 234px;
+                        height: 0;
+                        overflow: hidden;
+                        _zoom: 1;
+                        font-size: 12px;
+                        background: #ff6700;
+                        opacity: 0;
+                        filter: alpha(opacity=0);
+                        -webkit-transition: all 0.2s linear;
+                        transition: all 0.2s linear;
+                        a {
+                            display: block;
+                            padding: 8px 30px;
+                            outline: 0;
+                        }
+                    }
+                    .review {
+                        display: block;
+                        margin-bottom: 5px;
+                        color: #fff;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        overflow: hidden;
+                    }
+                    .author {
+                        display: block;
+                        color: #fff;
+                        color: rgba(255,255,255,0.6);
+                    }
+                }
+                .brick-item-s {
+                    height: 143px;
+                    padding-top: 50px;
+                    .figure-img {
+                        position: absolute;
+                        right: 20px;
+                        top: 32px;
+                        width: 80px;
+                        height: 80px;
+                        img {
+                            width: 80px;
+                            height: 80px;
+                        }
+                    }
+                    .title {
+                        color: #333;
+                        margin: -10px 110px 5px 30px;
+                        font-size: 14px;
+                        font-weight: 400;
+                        a {
+                            display: block;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            _zoom: 1;
+                            color: #333;
+                        }
+                    }
+                    .price {
+                        margin: 0 110px 0 30px;
+                        font-size: 12px;
+                        color: @greenColor;
+                        .num {
+                            font-size: 14px;
+                        }
+                    }
+                    .figure-more {
+                        position: absolute;
+                        right: 35px;
+                        top: 48px;
+                        width: 48px;
+                        height: 48px;
+                        a {
+                            display: block;
+                            color: #ff6700;
+                        }
+                        i {
+                            font-size: 48px;
+                            line-height: 48px;
+                        }
+                    }
+                    .more {
+                        display: block;
+                        margin: 0 110px 0 30px;
+                        font-size: 18px;
+                        color: #333;
+                        small {
+                            display: block;
+                            font-size: 12px;
+                            color: #757575;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

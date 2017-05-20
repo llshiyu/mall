@@ -19,6 +19,12 @@ $(function(){
 				$('.nav-a').addClass('undis');
 				$('.user-a').removeClass('undis');
 				$('#head-username').empty().append(data.message);
+				if(data.portrait == '' || data.portrait == undefined){
+					$('#head-username').siblings('img').attr('src','../../static/img/bird.png');
+				}else{
+					$('#head-username').siblings('img').attr('src',url+data.data.portrait);
+				}
+				
 			}
 			else{
 				$('.nav-a').removeClass('undis');
@@ -33,8 +39,9 @@ $(function(){
 			$('#err').empty().append('接口错误--head');
 		}
 	});
-	
+	//退出
 	$('#logout').click(function(e){
+		
 		logout();
 		e.preventDefault();
 	});
@@ -61,3 +68,4 @@ function logout(){
 		}
 	});
 }
+
